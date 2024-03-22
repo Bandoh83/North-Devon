@@ -260,12 +260,12 @@ const ContactUs = () => {
                   apropósito (por ejemplo insertándole humor y cosas por el
                   estilo). leer. Muc hos paquetes de autoedicióny editores de
                   páginas web usan el Lorem Ipsum como su texto por defecto, y
-                  al hacer una búsqueda de "Lorem Ipsum va a dar por resultado
+                  al hacer una búsqueda de Lorem Ipsum va a dar por resultado
                   muchos sitios web que usan este texto si se encuentran ene
                   stado de apropósito (por ejemplo insertándole humor y cosas
                   por el estilo). leer. Muc hos paquetes de autoedicióny
                   editores de páginas web usan el Lorem Ipsum como su texto por
-                  defecto, y al hacer una búsqueda de "Lorem Ipsum va a dar por
+                  defecto, y al hacer una búsqueda de Lorem Ipsum va a dar por
                   resultado muchos sitios web que usan este texto si se
                   encuentran ene stado de
                 </p>
@@ -292,12 +292,12 @@ const ContactUs = () => {
                   apropósito (por ejemplo insertándole humor y cosas por el
                   estilo). leer. Muc hos paquetes de autoedicióny editores de
                   páginas web usan el Lorem Ipsum como su texto por defecto, y
-                  al hacer una búsqueda de "Lorem Ipsum va a dar por resultado
+                  al hacer una búsqueda de Lorem Ipsum va a dar por resultado
                   muchos sitios web que usan este texto si se encuentran ene
                   stado de apropósito (por ejemplo insertándole humor y cosas
                   por el estilo). leer. Muc hos paquetes de autoedicióny
                   editores de páginas web usan el Lorem Ipsum como su texto por
-                  defecto, y al hacer una búsqueda de "Lorem Ipsum va a dar por
+                  defecto, y al hacer una búsqueda de Lorem Ipsum va a dar por
                   resultado muchos sitios web que usan este texto si se
                   encuentran ene stado de
                 </p>
@@ -324,12 +324,12 @@ const ContactUs = () => {
                   apropósito (por ejemplo insertándole humor y cosas por el
                   estilo). leer. Muc hos paquetes de autoedicióny editores de
                   páginas web usan el Lorem Ipsum como su texto por defecto, y
-                  al hacer una búsqueda de "Lorem Ipsum va a dar por resultado
+                  al hacer una búsqueda de Lorem Ipsum va a dar por resultado
                   muchos sitios web que usan este texto si se encuentran ene
                   stado de apropósito (por ejemplo insertándole humor y cosas
                   por el estilo). leer. Muc hos paquetes de autoedicióny
                   editores de páginas web usan el Lorem Ipsum como su texto por
-                  defecto, y al hacer una búsqueda de "Lorem Ipsum va a dar por
+                  defecto, y al hacer una búsqueda de Lorem Ipsum va a dar por
                   resultado muchos sitios web que usan este texto si se
                   encuentran ene stado de
                 </p>
@@ -351,17 +351,17 @@ const ContactUs = () => {
               },
               content: (
                 <p>
-                  enestado de desarrollo. Muchas versioneshan evolucion ado a
+                    enestado de desarrollo. Muchas versioneshan evolucion ado a
                   través de los añosalgunas veces por accidente, otras veces
                   apropósito (por ejemplo insertándole humor y cosas por el
                   estilo). leer. Muc hos paquetes de autoedicióny editores de
                   páginas web usan el Lorem Ipsum como su texto por defecto, y
-                  al hacer una búsqueda de "Lorem Ipsum va a dar por resultado
+                  al hacer una búsqueda de Lorem Ipsum va a dar por resultado
                   muchos sitios web que usan este texto si se encuentran ene
                   stado de apropósito (por ejemplo insertándole humor y cosas
                   por el estilo). leer. Muc hos paquetes de autoedicióny
                   editores de páginas web usan el Lorem Ipsum como su texto por
-                  defecto, y al hacer una búsqueda de "Lorem Ipsum va a dar por
+                  defecto, y al hacer una búsqueda de Lorem Ipsum va a dar por
                   resultado muchos sitios web que usan este texto si se
                   encuentran ene stado de
                 </p>

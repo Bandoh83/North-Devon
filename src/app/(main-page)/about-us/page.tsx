@@ -92,14 +92,14 @@ const AboutUs = () => {
               (por ejemplo insertándole humor y cosas por el estilo). leer.
               Muchos paquetes de autoedicióny editores de páginas web usan el
               Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de
-              "Lorem Ipsum va a dar por resultado muchos sitios web que usan
+              Lorem Ipsum va a dar por resultado muchos sitios web que usan
               este texto si se encuentran ene stado de
             </p>
             <p>
               apropósito (por ejemplo insertándole humor y cosas por el estilo).
               leer. Muchos paquetes de autoedicióny editores de páginas web usan
               el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda
-              de "Lorem Ipsum va a dar por resultado muchos sitios web que usan
+              de Lorem Ipsum va a dar por resultado muchos sitios web que usan
               este texto si se encuentran ene stado de
             </p>
           </div>

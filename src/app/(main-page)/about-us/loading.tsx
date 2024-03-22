@@ -1,5 +1,5 @@
 import { Skeleton } from "@nextui-org/react";
-import { LoadingSkeleton } from "../../sections/LoadingSkeleton";
+
 
 function Loading() {
   return (

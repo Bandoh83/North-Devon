@@ -47,31 +47,32 @@ const Home = () => {
         >
           <div className="embla__container">
             <div className="embla__slide ">
-              <Image src="/images/nhs.jpg" className="w-[120px] h-[80px]" />
+              <Image src="/images/nhs.jpg" alt="nhs" className="w-[120px] h-[80px]" />
             </div>
             <div className="embla__slide">
-              <Image src="/images/bc.jpg" className="w-[120px] h-[80px]" />
+              <Image src="/images/bc.jpg" alt="british council" className="w-[120px] h-[80px]" />
             </div>
             <div className="embla__slide">
-              <Image src="/images/amazon.jpg" className="w-[120px] h-[80px]" />
+              <Image src="/images/amazon.jpg" alt="amazon" className="w-[120px] h-[80px]" />
             </div>
             <div className="embla__slide">
               <Image
                 src="/images/barclays.jpg"
+                alt="barclays"
                 className="w-[120px] h-[80px]"
               />
             </div>
             <div className="embla__slide">
-              <Image src="/images/meta.jpg" className="w-[120px] h-[80px]" />
+              <Image alt="meta" src="/images/meta.jpg" className="w-[120px] h-[80px]" />
             </div>
             <div className="embla__slide">
-              <Image src="/images/netflix.jpg" className="w-[120px] h-[80px]" />
+              <Image alt="netflix" src="/images/netflix.jpg" className="w-[120px] h-[80px]" />
             </div>
             <div className="embla__slide">
-              <Image src="/images/jpm.jpg" className="w-[120px] h-[80px]" />
+              <Image alt="jpm" src="/images/jpm.jpg" className="w-[120px] h-[80px]" />
             </div>
             <div className="embla__slide">
-              <Image src="/images/doe.jpg" className="w-[200px] h-[100px]" />
+              <Image alt="d/o.e" src="/images/doe.jpg" className="w-[200px] h-[100px]" />
             </div>
           </div>
         </div>
@@ -85,8 +86,8 @@ const Home = () => {
           className="p-4 shadow-lg w-7/12 h-[550px] flex flex-row items-center justify-start gap-4 cursor-pointer"
         >
           <div className="w-1/2 h-full p-0 pb-2 flex flex-col items-start justify-start gap-2">
-            <Image isBurred isZoomed src="/images/family.jpg" />
-            <Image isBurred isZoomed src="/images/teachers.jpg" />
+            <Image isBurred isZoomed src="/images/family.jpg" alt="family" />
+            <Image isBurred isZoomed src="/images/teachers.jpg" alt="teachers" />
           </div>
           <div className="w-1/2 flex flex-col h-full p-0">
             <Image
@@ -94,10 +95,12 @@ const Home = () => {
               isZoomed
               src="/images/old.jpg"
               className="w-full h-[400px]"
+              alt="old"
             />
 
             <Image
               src="/images/plane-path.png"
+              alt="plane"
               className="mt-[-80px] p-0 w-[400px] h-[300px]"
             />
             {/* <TbPlaneTilt fill="#E9722B" color="#E9722B" className="mt-7 h-10 w-10 flex justify-center"/> */}
@@ -183,6 +186,7 @@ const Home = () => {
           >
             <Image
               isZoomed
+              alt="teachers"
               src="/images/teaching.jpg"
               className={`w-[550px]`}
             />
@@ -195,10 +199,12 @@ const Home = () => {
               isZoomed
               src="/images/industry.jpeg"
               className={`w-[500px] h-[150px]`}
+              alt="industry"
             />
             <Image
               isZoomed
               src="/images/class.jpg"
+              alt="class"
               className={`w-[500px] h-[150px]`}
             />
           </div>
@@ -254,7 +260,7 @@ const Home = () => {
           </div>
         </div>
         <div className="w-2/5 h-[500px] my-auto z-0">
-          <Image src="/images/plane.jpeg" className="h-[500px] rounded-none" />
+          <Image src="/images/plane.jpeg" className="h-[500px] rounded-none"  alt="plane"/>
         </div>
       </div>
       <div className="mt-0 w-full h-[800px] p-8 flex flex-row items-center justify-start gap-8">
@@ -273,6 +279,7 @@ const Home = () => {
             isZoomed
             src="/images/book.jpg"
             className="h-[420px] w-[550px]"
+            alt="books"
           />
           <div className="flex flex-col items-start justify-start gap-4 mx-8 mt-4">
             <Heading variant="h6">Lorem ipsum dolor sit amet</Heading>

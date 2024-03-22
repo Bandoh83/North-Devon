@@ -250,7 +250,7 @@ const Vacancies = () => {
 
             <p>
               GRE (Graduate Record Examination) is a general test that is often
-              required for admission to graduate programs (master's and doctoral
+              required for admission to graduate programs (master&apos;s and doctoral
               degrees) in various disciplines. Individuals interested in
               pursuing graduate education, including business, humanities,
               social sciences, natural sciences, and engineering, commonly take

@@ -168,6 +168,7 @@ const Chatbot = () => {
               height={50}
               className="mb-[-10px] pt-2"
               src="/images/north.png"
+              alt="logo"
             />
             <span className="text-[10px]">North Devon Recruitment</span>
           </span>
