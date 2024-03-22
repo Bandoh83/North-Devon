@@ -1,5 +1,5 @@
 import {CountryCode} from "libphonenumber-js";
-import { Country, getCountryCallingCode } from "react-phone-number-input";
+
 
 
 
@@ -17,19 +17,13 @@ export interface ICountry {
   flag?: string;
 }
 
-export interface IRequestErrorResponse {
-  message?: string,
-  description?: string;
-  status: number;
-  code?: number;
-}
 
-export type IAgeType = "Adult" | "Child";
+
 
 export interface ISupportedCountry {
-  name: string;
-  iso: Country;
-  code: ReturnType<typeof getCountryCallingCode>;
+  name: any | string;
+  iso: any;
+  code: ReturnType<any>;
   flag: string;
   cities?: Array<{
     name: string;

@@ -15,8 +15,8 @@ import usePlacesAutocomplete, {
 import { setKey, fromLatLng } from "react-geocode";
 import { GOOGLE_MAPS_API_KEY } from "@/resources/config";
 
-const DEFAULT_LATITUDE = 6.6706;
-const DEFAULT_LONGITUDE = -1.6163;
+const DEFAULT_LATITUDE = 6.6812;
+const DEFAULT_LONGITUDE = -1.6267;
 
 setKey(GOOGLE_MAPS_API_KEY);
 
@@ -32,11 +32,7 @@ interface IMapSearchProps {
   value?: IMapInfo;
 }
 
-interface IAccraSearch {
-  className?: string;
-}
-
-function AhodwoMapSearch({ className }: IAccraSearch) {
+function KumasiMapSearch() {
   const [markerPosition, setMarkerPosition] = useState<
     { lat: number; lng: number } | undefined
   >(undefined);
@@ -67,12 +63,14 @@ function AhodwoMapSearch({ className }: IAccraSearch) {
   // });
 
   useEffect(() => {
-    setMarkerPosition({ lat: 6.6706, lng: -1.6163 });
+    setMarkerPosition({ lat: 6.6812, lng: -1.6267});
   }, []);
+
   const onMapClick = React.useCallback(
     (e: { latLng: { lat: () => any; lng: () => any } }) => {
       const lat = e.latLng.lat();
       const lng = e.latLng.lng();
+      setMarkerPosition({ lat: lat, lng: lng });
 
       if (setMapInfo) {
         setMapInfo({ lat: lat, lng: lng, locationAddress: "" });
@@ -95,12 +93,7 @@ function AhodwoMapSearch({ className }: IAccraSearch) {
 
   return (
     <>
-      <div
-        className={clsx(
-          "border-2 w-1/2 h-[550px]  rounded-xl  flex  justify-center items-center",
-          className
-        )}
-      >
+      <div className="border-2 w-1/2 h-[550px]  rounded-xl  flex  justify-center items-center">
         {isLoaded ? (
           <GoogleMap
             id="map"
@@ -116,8 +109,8 @@ function AhodwoMapSearch({ className }: IAccraSearch) {
               disableDefaultUI: true,
               zoomControl: true,
             }}
-            zoom={15}
-            onClick={onMapClick}
+            zoom={17}
+            onClick={() => {}}
           >
             {markerPosition ? (
               <Marker
@@ -149,4 +142,4 @@ function AhodwoMapSearch({ className }: IAccraSearch) {
   );
 }
 
-export default AhodwoMapSearch;
+export default KumasiMapSearch;

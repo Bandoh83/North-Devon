@@ -1,5 +1,5 @@
 "use client"
-import { ChangeEvent, ReactNode, useEffect, useState } from "react";
+import { ChangeEvent, FocusEvent, ReactNode, useEffect, useState } from "react";
 import clsx from "clsx";
 import {Select as NextSelect, SelectItem, SelectSection, SelectedItems} from "@nextui-org/react";
 
@@ -41,7 +41,7 @@ interface ISelectProps {
   error?: string;
   value?: ISelectOption | Array<ISelectOption>;
   onValueChange?: (val?: ISelectOption | Array<ISelectOption>) => void;
-  onChange?: (e?: ChangeEvent) => any;
+  onChange?: (e?: ChangeEvent<HTMLInputElement>) => any;
   onBlur?: (e: React.FocusEvent<Element, Element>) => any;
   valueRender?: ((items: SelectedItems<ISelectOption>) => ReactNode) | undefined;
 
@@ -140,7 +140,7 @@ export default function Select({
         selectedKeys={selectedKeys()}
         onSelectionChange={handleSelectionChange}
         onChange={onChange}
-        onBlur={(e) => {
+        onBlur={(e: FocusEvent<Element, Element>) => {
           const val = selectedKeys();
           if(!val) {
             setAnimateLabel(false); 
@@ -161,7 +161,7 @@ export default function Select({
         onFocus={() => setAnimateLabel(true)}
         
       >
-        {(option) =>(
+        {(option: { id: any; value: any; icon: any; className: any; label: string; }) =>(
           // <>{option.children? (
           //   <SelectSection 
           //     title={option.label as string} 

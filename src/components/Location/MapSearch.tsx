@@ -106,7 +106,7 @@ function MapSearch() {
               zoomControl: true,
             }}
             zoom={10}
-            onClick={onMapClick}
+            // onClick={onMapClick}
           >
             {markerPosition ? (
               <Marker

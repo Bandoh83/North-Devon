@@ -1,14 +1,14 @@
 import { Avatar } from "@nextui-org/avatar";
 import { groupBy, snakeCase, sortBy, startCase, uniqBy } from "lodash";
 
-import { RELATION_TYPES, RELATIONSHIPS, SUFFIXES, SUPPORTED_COUNTRIES, TimeZones } from "@/resources/constants";
+import { SUPPORTED_COUNTRIES,  } from "@/resources/constants";
 import { ISelectOption } from "@/components/forms/Select";
 import { IRadioOption } from "@/components/RadioButton";
 import { ICountry, ICountryCode } from "@/resources/types/index";
 
 
 
-export const CountryOptions = SUPPORTED_COUNTRIES.reduce<Array<ISelectOption>>((cum, cur) =>([
+export const CountryOptions = SUPPORTED_COUNTRIES?.reduce<Array<ISelectOption>>((cum, cur) =>([
   ...cum,
   {
     id: cur.iso,
@@ -31,7 +31,7 @@ export const PhoneNumberCountryOptions: Record<ICountryCode, ICountry> = {
     code: "",
     flag: "/svg/international-phone-number.svg"
   },
-  ...SUPPORTED_COUNTRIES.reduce<Record<ICountryCode, ICountry>>((cum, cur) => (
+  ...SUPPORTED_COUNTRIES?.reduce<Record<ICountryCode, ICountry>>((cum, cur) => (
     {
       ...cum,
       [cur.iso]: {
@@ -94,37 +94,5 @@ export const StateCitiesOptions = (countryIso: string, state?: string) => {
   }
 }
 
-export const InviteeTypeOptions = RELATION_TYPES.reduce<IRadioOption[]>((cum, cur) => ([
-  ...cum,
-  {
-    title: cur,
-    value: cur
-  }
-]), []);
 
-export const SuffixOptions = SUFFIXES.reduce<ISelectOption[]>((cum, cur) => ([
-  ...cum,
-  {
-    id: startCase(cur),
-    label: cur,
-    value: cur
-  }
-]), []);
 
-export const RelationshipOptions = RELATIONSHIPS.reduce<ISelectOption[]>((cum, cur) => ([
-  ...cum,
-  {
-    id: startCase(cur),
-    label: cur,
-    value: cur
-  }
-]), []);
-
-export const TimezoneOptions = TimeZones.reduce<ISelectOption[]>((cum, cur) => ([
-  ...cum,
-  {
-    id: startCase(cur),
-    label: cur,
-    value: cur
-  }
-]), []);

@@ -50,6 +50,7 @@ export interface IDateInputProps {
     end: Date;
   }>;
   initialValue?: Date;
+  closeOnSelect?: boolean;
 };
 
 const DateInput = ({
@@ -60,6 +61,7 @@ const DateInput = ({
   onChange, 
   className,
   closeOnScroll = true,
+  closeOnSelect = true,
   placement,
   classes,
   format = "dd/MM/yyyy",
@@ -90,11 +92,12 @@ const DateInput = ({
     : value;
 
 
-  const handleChange = (dates: [Date | null, Date | null] | Date | null) => {
-    if(dates) {
-      onChange && onChange(dates);
+    const handleChange = (dates: [Date | null, Date | null] | Date | null) => {
+      if(dates) 
+        onChange && onChange(dates);
+      if(closeOnSelect) setOpen(false)
+  
     }
-  }
   
 
   return (
@@ -107,7 +110,7 @@ const DateInput = ({
       selectsRange={rangeVariant == "both"}
       selected={innerValue}
       onChange={handleChange}
-      popperPlacement={placement}
+      // popperPlacement={placement}
       popperClassName={clsx(Poppins.className, "!z-10", classes?.popper)}
       calendarClassName={Poppins.className}
       dayClassName={() => clsx(Poppins.className, "text-secondary")}

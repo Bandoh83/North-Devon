@@ -1,6 +1,6 @@
 "use client"
 
-import { ReactNode } from "react";
+import { JSXElementConstructor, Key, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal } from "react";
 import { 
   Tabs as NextTabs, Tab
 } from "@nextui-org/react";
@@ -65,7 +65,7 @@ function Tabs({
         variant={innerVariant}
         selectedKey={activeTabId}
         color={color}
-        onSelectionChange={(key) =>{
+        onSelectionChange={(key: string) =>{
           onSwitchTab && onSwitchTab(key as string);
         }}
         classNames={{
@@ -87,7 +87,7 @@ function Tabs({
           ),
         }}
       >
-        {(item) =>(
+        {(item: { id: Key | null | undefined; label: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; href: string | undefined; content: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) =>(
           <Tab 
             key={item.id}
             title={item.label}

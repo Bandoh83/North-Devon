@@ -17,7 +17,7 @@ export interface IAccordionItem {
     open?: ReactNode;
     close?: ReactNode;
   }
-  classes?: SlotsToClasses<AccordionItemSlots>;
+  classes?: SlotsToClasses<string>;
 }
 
 interface IAccordion {
@@ -27,7 +27,7 @@ interface IAccordion {
   compact?: boolean;
   variant?: "underlined" | "shadow" | "bordered" | "pills",
   disabled?: boolean;
-  accordionItemsStyle?: SlotsToClasses<AccordionItemSlots>,
+  accordionItemsStyle?: SlotsToClasses<string>,
   classes?: {
     base?: string
     content: string,
@@ -79,7 +79,7 @@ function Accordion({
           subtitle={item.description}
           startContent={item.prepend}
           classNames={accordionItemsStyle && item.classes}	
-          indicator={item.indicator?.close? (({isOpen}) =>(isOpen? item.indicator?.open : item.indicator?.close)) : item.indicator?.open}
+          indicator={item.indicator?.close? (({isOpen}:  { isOpen: boolean }) =>(isOpen? item.indicator?.open : item.indicator?.close)) : item.indicator?.open}
         >
           {item.content}
         </AccordionItem>

@@ -129,7 +129,7 @@ function Dropdown({
         }}
         items={options}
       >
-        {(option) =>(
+        {(option: { id: any; href: any; icon: any; description: any; className: any; onClick: any; label: any; }) =>(
           <DropdownItem 
             key={option.id} 
             href={option.href}

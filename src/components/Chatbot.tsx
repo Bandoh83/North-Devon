@@ -115,7 +115,7 @@ const Chatbot = () => {
       storageKey: "example_theming",
     },
     floated: true,
-    header: {},
+    
     chatButton: {
       icon: "/images/north.png",
     },

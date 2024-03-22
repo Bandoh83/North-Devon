@@ -124,10 +124,16 @@ const Forms = () => {
           </div> */}
           <Select
             onValueChange={(val) => {
-              if (val?.[0].id == "gh") {
-                handleLocationChange("Ghana");
-              } else if (val?.[0].id == "intl") {
-                handleLocationChange("Abroad");
+              if (Array.isArray(val)) {
+                // val is an array, handle the case where it's an array
+                if (val.length > 0 && val[0]?.id === "gh") {
+                  handleLocationChange("Ghana");
+                }
+              } else {
+                // val is not an array, handle the case where it's a single object
+                if (val?.id === "gh") {
+                  handleLocationChange("Ghana");
+                }
               }
             }}
             // onChange={handleLocationChange}
@@ -166,7 +172,7 @@ const Forms = () => {
             // }}
 
             onChange={(e) => {
-              handleTestTypeChange(e?.target.value);
+              handleTestTypeChange(e?.target.value ?? "");
             }}
             name="test_type"
             label="Select test type"
@@ -206,7 +212,7 @@ const Forms = () => {
             // }}
 
             onChange={(e) => {
-              handleTuitionTypeChange(e?.target.value);
+              handleTuitionTypeChange(e?.target.value ?? "");
             }}
             name="tuition_type"
             label="Type of tuition"

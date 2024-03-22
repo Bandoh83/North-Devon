@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Input as NextInput } from "@nextui-org/react";
-import { getCountryCallingCode, formatPhoneNumberIntl } from "react-phone-number-input";
-import { AsYouType, CountryCode, Extension, NumberType, PhoneNumber, parsePhoneNumber } from "libphonenumber-js";
+
+import { AsYouType, CountryCode, Extension, NumberType, PhoneNumber, parsePhoneNumber, getCountryCallingCode } from "libphonenumber-js";
 import clsx from "clsx";
 
 import { Poppins } from "@/resources/fonts";
@@ -9,6 +9,8 @@ import { IInputProps } from "../Input";
 import CountrySelect from "./CountrySelect";
 import styles from "../input.module.css";
 import { ICountryCode } from "@/resources/types/index";
+
+
 
 
 
@@ -57,6 +59,8 @@ const parseNumber = (v: string, defaultCC?: CountryCode) => {
   }
 }
 
+
+
 interface IPhoneInputProps extends Omit<IInputProps, "type" | "prepend" | "onChange"> {
   countryCode?: boolean;
   defaultCountryCode?: ICountryCode;
@@ -91,7 +95,27 @@ function PhoneInput({
   const [animateLabel, setAnimateLabel] = useState(false);
   const plus_value = value? (value?.charAt(0) == "+"? value : `+${value}`) : ""; 
   const parsedValue = parseNumber(plus_value, defaultCountryCode);
-  const innerValue = formatPhoneNumberIntl(parsedValue.number)? formatPhoneNumberIntl(parsedValue.number) : parsedValue.number;
+  // const innerValue = formatPhoneNumberIntl(parsedValue.number)? formatPhoneNumberIntl(parsedValue.number) : parsedValue.number;
+
+  const [innerValue, setInnerValue] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Dynamically import react-phone-number-input
+    import("react-phone-number-input").then((module) => {
+      // Destructure the required functions from the module
+      const { formatPhoneNumberIntl } = module;
+      
+      // Use the imported function
+      const formattedNumber = formatPhoneNumberIntl(parsedValue.number);
+      
+      // Update state with the formatted number or the original number if formatting fails
+      setInnerValue(formattedNumber || parsedValue.number);
+    }).catch((error) => {
+      // Handle errors if the module fails to load
+      console.error("Error loading react-phone-number-input:", error);
+    });
+  }, [parsedValue]); 
+
   
 
   const handleChange = (val: string) => {
@@ -156,7 +180,7 @@ function PhoneInput({
       endContent={append}
       value={innerValue}
       onValueChange={handleChange}
-      onBlur={(e) => {
+      onBlur={(e: React.FocusEvent<any, Element>) => {
         if(!value) {
           setAnimateLabel(false); 
         }

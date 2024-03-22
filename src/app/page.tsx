@@ -11,7 +11,7 @@ import DateInput from "@/components/forms/DateInput";
 import Select from "@/components/forms/Select";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import HoverVideoPlayer from "react-hover-video-player";
+import  HoverVideoPlayer from "react-hover-video-player";
 import { useState } from "react";
 import Chatbot from "@/components/Chatbot";
 import styles from "./card.module.css";
@@ -461,6 +461,7 @@ const Home = () => {
                   </div>
                   <div className="w-full flex flex-row items-start gap-4">
                     <DateInput
+                    
                       name="date"
                       value={values.date ?? null}
                       required
@@ -473,6 +474,7 @@ const Home = () => {
                       onBlur={handleBlur}
                       error={touched.date ? errors.date : undefined}
                       rangeVariant="start"
+                    
                     />
                     <DateInput
                       name="time"

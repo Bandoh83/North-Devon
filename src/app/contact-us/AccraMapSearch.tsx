@@ -113,7 +113,7 @@ function AccraMapSearch({className}: IAccraSearch) {
               zoomControl: true,
             }}
             zoom={18}
-            onClick={onMapClick}
+            onClick={() => {}}
           >
             {markerPosition ? (
               <Marker

@@ -15,8 +15,8 @@ import usePlacesAutocomplete, {
 import { setKey, fromLatLng } from "react-geocode";
 import { GOOGLE_MAPS_API_KEY } from "@/resources/config";
 
-const DEFAULT_LATITUDE = 6.6812;
-const DEFAULT_LONGITUDE = -1.6267;
+const DEFAULT_LATITUDE = 6.6706;
+const DEFAULT_LONGITUDE = -1.6163;
 
 setKey(GOOGLE_MAPS_API_KEY);
 
@@ -32,7 +32,11 @@ interface IMapSearchProps {
   value?: IMapInfo;
 }
 
-function KumasiMapSearch() {
+interface IAccraSearch {
+  className?: string;
+}
+
+function AhodwoMapSearch({ className }: IAccraSearch) {
   const [markerPosition, setMarkerPosition] = useState<
     { lat: number; lng: number } | undefined
   >(undefined);
@@ -63,14 +67,12 @@ function KumasiMapSearch() {
   // });
 
   useEffect(() => {
-    setMarkerPosition({ lat: 6.6812, lng: -1.6267});
+    setMarkerPosition({ lat: 6.6706, lng: -1.6163 });
   }, []);
-
   const onMapClick = React.useCallback(
     (e: { latLng: { lat: () => any; lng: () => any } }) => {
       const lat = e.latLng.lat();
       const lng = e.latLng.lng();
-      setMarkerPosition({ lat: lat, lng: lng });
 
       if (setMapInfo) {
         setMapInfo({ lat: lat, lng: lng, locationAddress: "" });
@@ -93,7 +95,12 @@ function KumasiMapSearch() {
 
   return (
     <>
-      <div className="border-2 w-1/2 h-[550px]  rounded-xl  flex  justify-center items-center">
+      <div
+        className={clsx(
+          "border-2 w-1/2 h-[550px]  rounded-xl  flex  justify-center items-center",
+          className
+        )}
+      >
         {isLoaded ? (
           <GoogleMap
             id="map"
@@ -109,8 +116,8 @@ function KumasiMapSearch() {
               disableDefaultUI: true,
               zoomControl: true,
             }}
-            zoom={17}
-            onClick={onMapClick}
+            zoom={15}
+            onClick={() => {}}
           >
             {markerPosition ? (
               <Marker
@@ -142,4 +149,4 @@ function KumasiMapSearch() {
   );
 }
 
-export default KumasiMapSearch;
+export default AhodwoMapSearch;

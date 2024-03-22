@@ -1,6 +1,6 @@
 import { CircularProgress, Skeleton } from "@nextui-org/react";
 import { Chip, Link, Image } from "@nextui-org/react";
-import { LoadingSkeleton } from "../sections/LoadingSkeleton";
+
 
 function Loading() {
   return (

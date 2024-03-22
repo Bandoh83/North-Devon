@@ -45,7 +45,7 @@ function CountrySelect({
       }}
       selectedKeys={value? new Set([value]) : undefined }
       onSelectionChange={handleSelectionChange}
-      renderValue={(selectedList) =>{        
+      renderValue={(selectedList: { data: any; }[]) =>{        
         const country = selectedList[0]?.data;
 
         return (
@@ -61,7 +61,7 @@ function CountrySelect({
       }}  
       onFocus={onFocus}  
     >
-      {(country) =>(
+      {(country: { iso: string; name: string | undefined; flag: string | undefined; code: any; }) =>(
         <SelectItem 
           key={country.iso} 
           value={country.iso}

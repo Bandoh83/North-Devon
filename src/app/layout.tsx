@@ -1,8 +1,8 @@
 "use client";
 
 import { Poppins } from "@/resources/fonts";
-import "../globals.css";
-import NextProvider from "../NextUIProvider";
+import "./globals.css";
+import NextProvider from "./NextUIProvider";
 import Home from "./page";
 import Footer from "./sections/Footer";
 import TopBar from "./sections/Topbar";

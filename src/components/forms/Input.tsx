@@ -114,7 +114,7 @@ const Input = forwardRef<HTMLInputElement, IInputProps>((
       value={value}
       onValueChange={onValueChange}
       onChange={(onChange)}
-      onBlur={(e) => {
+      onBlur={(e: React.FocusEvent<any, Element>) => {
         const elem = e.target as HTMLInputElement;
         const val = elem.value;
         

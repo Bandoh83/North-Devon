@@ -85,7 +85,7 @@ function Textarea({
         fullWidth={fullWidth}
         onChange={onChange}
         onValueChange={onValueChange}
-        onBlur={(e) => {
+        onBlur={(e: { target: HTMLInputElement; }) => {
           const elem = e.target as HTMLInputElement;
           const val = elem.value;
           
