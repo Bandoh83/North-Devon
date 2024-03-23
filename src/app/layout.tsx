@@ -83,7 +83,7 @@ export default function RootLayout({
               <TopBar />
             </div>
             <div className="bg-gray flex flex-row items-center justify-between rounded-full px-10 py-0 h-[80px] z-30 absolute top-[15%] left-10 right-10 mx-auto">
-              <Image width={200} height={200} src="./images/north.png" alt="logo" />
+              <Image width={200} height={200} src="/images/north.png" alt="logo" />
               <Tabs
                 wrapperClassName="mx-auto"
                 tabList={TABS.map((tab) => ({

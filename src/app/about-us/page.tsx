@@ -7,7 +7,7 @@ import styles from "../card.module.css";
 const AboutUs = () => {
   return (
     <>
-      <section className="h-[525px] overflow-hidden relative bg-[url('./images/new-about-us.jpg')] bg-no-repeat bg-center bg-cover opacity-90">
+      <section className="h-[525px] overflow-hidden relative bg-[url('/images/new-about-us.jpg')] bg-no-repeat bg-center bg-cover opacity-90">
         <p className="text-9xl w-full bg-transparent font-black subpixel-antialiased tracking-wide text-gray opacity-70 absolute bottom-0 left-10 mb-0 pb-0">
           About Us
         </p>
@@ -25,14 +25,14 @@ const AboutUs = () => {
               isZoomed
               isBlurred
               className="w-[270px] h-[230px] rounded-2xl"
-              src="./images/image01_left.jpg"
+              src="/images/image01_left.jpg"
               alt={"image01"}
             />
             <Image
               isZoomed
               isBlurred
               className="w-[290px] h-[230px]  rounded-2xl"
-              src="./images/image02_right.jpg"
+              src="/images/image02_right.jpg"
               alt={"image02"}
             />
           </div>
@@ -42,7 +42,7 @@ const AboutUs = () => {
               isZoomed
               // isBlurred
               className="w-full h-full object-cover rounded-2xl"
-              src="./images/image03_span_bottom.jpg"
+              src="/images/image03_span_bottom.jpg"
               alt={"image03"}
             />
           </div>

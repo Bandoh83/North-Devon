@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="w-full bg-primary h-[400px] pl-[100px] pb-8 pr-8 pt-14 space-y-10 mb-0 z-10">
       <div className="w-full flex flex-row items-start justify-start gap-24">
         <Chip className="bg-gray h-[50px] p-0">
-          <Image width={100} height={150} src="./images/north.png" />
+          <Image width={100} height={150} src="/images/north.png" />
         </Chip>
         <div className="w-1/4 text-white tex-xs font-light">
           <p className="">

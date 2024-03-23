@@ -104,13 +104,13 @@ const OurServices = () => {
           className="p-4 shadow-lg w-7/12 h-[550px] flex flex-row items-center justify-start gap-4 cursor-pointer"
         >
           <div className="w-1/2 h-full p-0 pb-2 flex flex-col items-start justify-start gap-2">
-            <Image isBurred isZoomed src="./images/family.jpg" alt="family image" />
-            <Image isBurred isZoomed src="./images/teachers.jpg" alt="techers"/>
+            <Image isBurred isZoomed src="/images/family.jpg" alt="family image" />
+            <Image isBurred isZoomed src="/images/teachers.jpg" alt="techers"/>
           </div>
           <div className="w-1/2 flex flex-col h-full p-0">
-            <Image isBurred isZoomed src="./images/old.jpg" className="w-full h-[400px]" alt="old" />
+            <Image isBurred isZoomed src="/images/old.jpg" className="w-full h-[400px]" alt="old" />
       
-            <Image src="./images/plane-path.png" className="mt-[-80px] p-0 w-[400px] h-[300px]" alt="vector"/>
+            <Image src="/images/plane-path.png" className="mt-[-80px] p-0 w-[400px] h-[300px]" alt="vector"/>
             {/* <TbPlaneTilt fill="#E9722B" color="#E9722B" className="mt-7 h-10 w-10 flex justify-center"/> */}
           </div>
         </Card>
@@ -187,16 +187,16 @@ const OurServices = () => {
           className={`p-4 mt-8 mb-8 w-7/12 h-[500px] flex flex-col items-center justify-start gap-4 cursor-pointer`}
         >
           <div className={`w-[550px] h-full p-0`}>
-            <Image  src="./images/teaching.jpg" className={`w-[550px] ${styles.card} hover:scale-110`} alt="teaching" />
+            <Image  src="/images/teaching.jpg" className={`w-[550px] ${styles.card} hover:scale-110`} alt="teaching" />
             {/* <TbPlaneTilt fill="#E9722B" color="#E9722B" className="mt-7 h-10 w-10 flex justify-center"/> */}
           </div>
           <div className={`w-[470px]  mt-[-80px] h-full p-0 pb-2 flex flex-row items-start justify-start gap-2`}>
             <Image 
-              src="./images/industry.jpeg"
+              src="/images/industry.jpeg"
               alt="industry"
               className={`w-[500px] ${styles.innercard} h-[150px] hover:scale-110`}
             />
-            <Image alt="indistry" src="./images/class.jpg" className={`w-[500px] ${styles.innercard} h-[150px] hover:scale-110`} />
+            <Image alt="indistry" src="/images/class.jpg" className={`w-[500px] ${styles.innercard} h-[150px] hover:scale-110`} />
           </div>
         </Card>
       </div>
@@ -262,7 +262,7 @@ const OurServices = () => {
             Vacancies and Events
           </Heading>
 
-          <Image isBurred isZoomed src="./images/book.jpg" className="h-[420px] w-[550px]" alt="industry" />
+          <Image isBurred isZoomed src="/images/book.jpg" className="h-[420px] w-[550px]" alt="industry" />
           <div className="flex flex-col items-start justify-start gap-4 mx-8 mt-4">
             <Heading variant="h6">Lorem ipsum dolor sit amet</Heading>
             <p className="text-secondary-gray text-sm">
