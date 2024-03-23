@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 
 import Forms from "@/components/forms";
 import styles from "../card.module.css";
-import AhodwoMapSearch from "./AhodwoMapSearch";
+import AhodwoMapSearch from "../../components/AhodwoMapSearch";
 import useEmblaCarousel from "embla-carousel-react";
 
 const Vacancies = () => {
@@ -21,7 +21,7 @@ const Vacancies = () => {
   };
   return (
     <>
-      <section className="h-[525px] overflow-hidden relative bg-[url('/images/vacanciesImage.jpg')] bg-no-repeat bg-center bg-cover">
+      <section className="h-[525px] overflow-hidden relative bg-[url('./images/vacanciesImage.jpg')] bg-no-repeat bg-center bg-cover">
         <p className="text-9xl w-full bg-transparent font-black subpixel-antialiased tracking-wide text-gray opacity-70 absolute bottom-0 left-10 mb-0 pb-0">
           Vacancies
         </p>
@@ -59,7 +59,7 @@ const Vacancies = () => {
               <Image
                 isZoomed
                 isBlurred
-                src="/images/vancanciesbg.jpg"
+                src="./images/vancanciesbg.jpg"
                 alt="Your Image Alt Text"
                 layout="fill"
                 objectFit="cover"
@@ -91,15 +91,7 @@ const Vacancies = () => {
                       based outside the UK.
                     </p>
                     <div className="w-1/2">
-                      <Button
-                        onClick={() =>
-                          (window.location.href = "/appointmentForm")
-                        }
-                        className="mt-5"
-                        rounded
-                        size="lg"
-                        fullWidth
-                      >
+                      <Button className="mt-5" rounded size="lg" fullWidth>
                         Book
                       </Button>
                     </div>
@@ -122,15 +114,7 @@ const Vacancies = () => {
                       based outside the UK.
                     </p>
                     <div className="w-1/2">
-                      <Button
-                        onClick={() =>
-                          (window.location.href = "/appointmentForm")
-                        }
-                        className="mt-5"
-                        rounded
-                        size="lg"
-                        fullWidth
-                      >
+                      <Button className="mt-5" rounded size="lg" fullWidth>
                         Book
                       </Button>
                     </div>
@@ -153,15 +137,7 @@ const Vacancies = () => {
                       based outside the UK.
                     </p>
                     <div className="w-1/2">
-                      <Button
-                        onClick={() =>
-                          (window.location.href = "/appointmentForm")
-                        }
-                        className="mt-5"
-                        rounded
-                        size="lg"
-                        fullWidth
-                      >
+                      <Button className="mt-5" rounded size="lg" fullWidth>
                         Book
                       </Button>
                     </div>
@@ -184,15 +160,7 @@ const Vacancies = () => {
                       based outside the UK.
                     </p>
                     <div className="w-1/2">
-                      <Button
-                        onClick={() =>
-                          (window.location.href = "/appointmentForm")
-                        }
-                        className="mt-5"
-                        rounded
-                        size="lg"
-                        fullWidth
-                      >
+                      <Button className="mt-5" rounded size="lg" fullWidth>
                         Book
                       </Button>
                     </div>
@@ -211,15 +179,7 @@ const Vacancies = () => {
                       elit.
                     </p>
                     <div className="w-1/2">
-                      <Button
-                        onClick={() =>
-                          (window.location.href = "/appointmentForm")
-                        }
-                        className="mt-5"
-                        rounded
-                        size="lg"
-                        fullWidth
-                      >
+                      <Button className="mt-5" rounded size="lg" fullWidth>
                         Button
                       </Button>
                     </div>
@@ -250,16 +210,16 @@ const Vacancies = () => {
 
             <p>
               GRE (Graduate Record Examination) is a general test that is often
-              required for admission to graduate programs (master&apos;s and doctoral
-              degrees) in various disciplines. Individuals interested in
-              pursuing graduate education, including business, humanities,
+              required for admission to graduate programs (master&apos;s and
+              doctoral degrees) in various disciplines. Individuals interested
+              in pursuing graduate education, including business, humanities,
               social sciences, natural sciences, and engineering, commonly take
               the GRE.
             </p>
             <br />
 
             <p>
-              {" "}
+      
               GMAT (Graduate Management Admission) is specifically designed for
               individuals applying to graduate management programs, such as MBA.
               However, it is generally taken by individuals who aspire to pursue
@@ -339,7 +299,7 @@ const Vacancies = () => {
             isBlurred
             rounded="md"
             className="w-[430px] h-[239px]"
-            src="/images/Training center.jpg"
+            src="./images/Training center.jpg"
             alt="Your Image Alt Text"
             layout="fill"
             objectFit="cover"

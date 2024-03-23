@@ -1,5 +1,6 @@
 import IconButton from "@/components/Button/IconButton";
 import { FacebookIcon } from "@/icons/index";
+import { Link } from "@nextui-org/react";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTelephoneFill } from "react-icons/bs";
 import { GoClockFill } from "react-icons/go";
@@ -40,33 +41,22 @@ const TopBar = () => {
         </div>
       </div>
       <div className="flex flex-row items-center justify-end gap-0">
-        <IconButton
-          rounded
-          variant="link"
-          color="secondary"
-          onClick={(e) => {
-            setTimeout(() => {
-              window.open(
-                "https://www.facebook.com/profile.php?id=61554625350987&mibextid=LQQJ4d"
-              );
-            }, 1000);
-          }}
-        >
-          <FacebookIcon className="w-5 h-5" />
+        <IconButton rounded variant="link" color="secondary">
+          <Link
+            isExternal
+            href="https://www.facebook.com/profile.php?id=61554625350987&mibextid=LQQJ4d"
+          >
+            <FacebookIcon className="w-5 h-5" />
+          </Link>
         </IconButton>
-        <IconButton
-          rounded
-          variant="link"
-          color="secondary"
-          onClick={(e) => {
-            setTimeout(() => {
-              window.open(
-                "https://www.instagram.com/p/C1B_jKvrmnK/?igshid=ZDE1MWVjZGVmZQ=="
-              );
-            }, 1000);
-          }}
-        >
-          <AiFillInstagram className="w-6 h-6" />
+
+        <IconButton rounded variant="link" color="secondary">
+          <Link
+            isExternal
+            href="https://www.instagram.com/p/C1B_jKvrmnK/?igshid=ZDE1MWVjZGVmZQ=="
+          >
+            <AiFillInstagram className="w-6 h-6" />
+          </Link>
         </IconButton>
       </div>
     </div>

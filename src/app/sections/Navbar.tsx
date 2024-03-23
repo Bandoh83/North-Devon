@@ -5,7 +5,7 @@ import { Image } from "@nextui-org/react";
 const NavBar = () => {
   return (
     <div className="bg-white flex flex-row items-center justify-between rounded-full px-10 py-0 h-[100px] z-30 absolute top-[20%] left-10 right-10 mx-auto">
-      <Image width={250} height={250} src="/images/north.png" alt="logo" />
+      <Image width={250} height={250} src="./images/north.png" alt="logo" />
       <Tabs
         wrapperClassName="mx-auto"
         tabList={[

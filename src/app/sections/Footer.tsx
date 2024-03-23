@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="w-full bg-primary h-[400px] pl-[100px] pb-8 pr-8 pt-14 space-y-10 mb-0 z-10">
       <div className="w-full flex flex-row items-start justify-start gap-24">
         <Chip className="bg-gray h-[50px] p-0">
-          <Image width={100} height={150} src="/images/north.png" />
+          <Image width={100} height={150} src="./images/north.png" />
         </Chip>
         <div className="w-1/4 text-white tex-xs font-light">
           <p className="">
@@ -15,10 +15,18 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-start justify-start gap-2 text-white">
           <div className="font-semibold text-white">Quick Links</div>
-          <Link className="text-white cursor-pointer">Home</Link>
-          <Link className="text-white cursor-pointer">About Us</Link>
-          <Link className="text-white cursor-pointer">Services</Link>
-          <Link className="text-white cursor-pointer">Vacancies</Link>
+          <Link href="/" className="text-white cursor-pointer">
+            Home
+          </Link>
+          <Link href="/about-us" className="text-white cursor-pointer">
+            About Us
+          </Link>
+          <Link href="/our-services" className="text-white cursor-pointer">
+            Services
+          </Link>
+          <Link href="/vacancies" className="text-white cursor-pointer">
+            Vacancies
+          </Link>
         </div>
         <div className="flex flex-col items-start justify-start gap-2 text-white">
           <div className="font-semibold text-white">FaQ and Terms</div>
