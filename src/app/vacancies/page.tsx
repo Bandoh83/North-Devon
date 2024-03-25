@@ -6,19 +6,14 @@ import { Image } from "@nextui-org/react";
 import Button from "@/components/Button";
 
 import Forms from "@/components/forms";
-import styles from "../card.module.css";
+
 import AhodwoMapSearch from "../../components/AhodwoMapSearch";
 import useEmblaCarousel from "embla-carousel-react";
+import styles from "../card.module.css";
 
-const Vacancies = () => {
+const Vancancies = () => {
   const [value, setValue] = React.useState("fruit");
   const [emblaRef] = useEmblaCarousel({ dragFree: true });
-
-  const handleChange = (event: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
-    setValue(event.target.value);
-  };
   return (
     <>
       <section className="h-[525px] overflow-hidden relative bg-[url('/images/vacanciesImage.jpg')] bg-no-repeat bg-center bg-cover">
@@ -219,7 +214,6 @@ const Vacancies = () => {
             <br />
 
             <p>
-      
               GMAT (Graduate Management Admission) is specifically designed for
               individuals applying to graduate management programs, such as MBA.
               However, it is generally taken by individuals who aspire to pursue
@@ -261,10 +255,10 @@ const Vacancies = () => {
       <section className="flex justify-center items-center space-x-4 mt-8 px-32 pb-32">
         {/* Card on the left */}
         {/* <div className="flex-1">
-          <Card className="w-[698px] h-[571px] bg-gray">
-            <div className="flex flex-col h-full justify-between"></div>
-          </Card>
-        </div> */}
+        <Card className="w-[698px] h-[571px] bg-gray">
+          <div className="flex flex-col h-full justify-between"></div>
+        </Card>
+      </div> */}
         <AhodwoMapSearch />
 
         {/* Two Vertical Cards on the right */}
@@ -306,10 +300,8 @@ const Vacancies = () => {
           />
         </div>
       </section>
-
-      {/* Continue with other content or components... */}
     </>
   );
 };
 
-export default Vacancies;
+export default Vancancies;

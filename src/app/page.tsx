@@ -13,7 +13,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import  HoverVideoPlayer from "react-hover-video-player";
 import { useState } from "react";
-import Chatbot from "@/components/Chatbot";
+// import Chatbot from "@/components/Chatbot";
 import styles from "./card.module.css";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
@@ -516,7 +516,7 @@ const Home = () => {
         </Card>
       </div>
       {/* <MapSearch /> */}
-      <Chatbot />
+      {/* <Chatbot /> */}
     </>
     </div>
   );
