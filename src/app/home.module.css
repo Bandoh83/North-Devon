@@ -1,3 +1,10 @@
 .section {
     background-image: url("/plane.mp4");
 }
+
+.background {
+    @media screen and (max-width: 600px) {
+        width: 70px;
+      }
+    
+    }

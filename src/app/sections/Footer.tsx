@@ -2,18 +2,18 @@ import { Chip, Link, Image } from "@nextui-org/react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-primary h-[400px] pl-[100px] pb-8 pr-8 pt-14 space-y-10 mb-0 z-10">
-      <div className="w-full flex flex-row items-start justify-start gap-24">
+    <footer className="w-screen bg-primary md:h-[400px] pl-5 md:pl-[100px] pb-8 pr-8 pt-14 space-y-10 mb-0 z-10">
+      <div className="w-full flex flex-row items-start justify-between md:justify-start gap-24">
         <Chip className="bg-gray h-[50px] p-0">
           <Image width={100} height={150} src="/images/north.png" />
         </Chip>
-        <div className="w-1/4 text-white tex-xs font-light">
+        <div className="w-1/4 hidden md:flex text-white tex-xs font-light">
           <p className="">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <div className="flex flex-col items-start justify-start gap-2 text-white">
+        <div className="flex flex-col items-start justify-start gap-2 text-white  text-sm md:text-base">
           <div className="font-semibold text-white">Quick Links</div>
           <Link href="/" className="text-white cursor-pointer">
             Home
@@ -28,7 +28,7 @@ const Footer = () => {
             Vacancies
           </Link>
         </div>
-        <div className="flex flex-col items-start justify-start gap-2 text-white">
+        <div className="hidden md:flex flex-col items-start justify-start gap-2 text-white">
           <div className="font-semibold text-white">FaQ and Terms</div>
           <Link className="text-white cursor-pointer">FaQs</Link>
           <Link className="text-white cursor-pointer">Privacy & Policy</Link>
@@ -37,8 +37,9 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-row items-start justify-between text-white pl-5">
-        <div className="flex flex-col items-start justify-start gap-2">
+
+      <div className="flex flex-row items-start justify-end md:justify-between text-white pl-5 text-sm md:text-lg">
+        <div className="hidden  md:flex flex-col items-start justify-start gap-2">
           <p className="font-semibold">Contact</p>
           <p className="text-gray font-light text-sm">
             Mail: operations@northdevonrecruitment

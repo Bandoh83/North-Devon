@@ -1,6 +1,6 @@
 "use client";
 import Card from "@/components/Card";
-import React from "react";
+import React, { useEffect } from "react";
 import Heading from "@/components/Heading";
 import Accordion from "@/components/Accordion";
 import Button from "@/components/Button";
@@ -11,13 +11,17 @@ import { Formik } from "formik";
 import DateInput from "@/components/forms/DateInput";
 import * as Yup from "yup";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
-import { FaChevronLeft} from "react-icons/fa";
+import { FaChevronLeft } from "react-icons/fa";
 import KumasiMapSearch from "../../components/KumasiMapSearch";
 import AccraMapSearch from "../../components/AccraMapSearch";
 
 const ContactUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
+    
       <section className="h-[527px] overflow-hidden relative bg-[url('/images/new-contact-us.jpg')] bg-no-repeat bg-center bg-cover opacity-90 ">
         <p className="text-9xl w-full bg-transparent font-black subpixel-antialiased tracking-wide text-gray opacity-70 absolute bottom-0 left-10 mb-0 pb-0">
           Contact Us
@@ -116,9 +120,7 @@ const ContactUs = () => {
               validateOnBlur
               validateOnChange={false}
               validationSchema={Yup.object({
-                name: Yup.string()
-                  .trim()
-                  .required("Name required"),
+                name: Yup.string().trim().required("Name required"),
                 date: Yup.date().required("Pick date"),
                 time: Yup.date().required("Pick time"),
                 email: Yup.string()
@@ -351,7 +353,7 @@ const ContactUs = () => {
               },
               content: (
                 <p>
-                    enestado de desarrollo. Muchas versioneshan evolucion ado a
+                  enestado de desarrollo. Muchas versioneshan evolucion ado a
                   través de los añosalgunas veces por accidente, otras veces
                   apropósito (por ejemplo insertándole humor y cosas por el
                   estilo). leer. Muc hos paquetes de autoedicióny editores de

@@ -12,6 +12,8 @@ import Button from "@/components/Button/index";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { GOOGLE_MAPS_API_KEY } from "@/resources/config";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link,} from "@nextui-org/react";
+import NextBar from "./sections/NextBar";
 
 // export const metadata: Metadata = {
 //   title: "North Devon Recruitment",
@@ -50,6 +52,21 @@ export default function RootLayout({
   const [activeTab, setActiveTab] = useState("/");
   const pathname = usePathname();
   const router = useRouter();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ];
+  
 
   useEffect(() => {
     if (pathname === "/about-us") {
@@ -63,7 +80,7 @@ export default function RootLayout({
     } else if (pathname === "/contact-us") {
       setActiveTab("contact-us");
     }
-  }, [pathname]);
+  }, [pathname, activeTab]);
 
   console.log(pathname);
 
@@ -79,10 +96,12 @@ export default function RootLayout({
       <body className={Poppins.className}>
         <NextProvider>
           <main className="light text-foreground bg-background min-w-[1285px] w-screen min-h-screen font-poppins">
+           
             <div className="px-20 h-10 my-2 relative">
               <TopBar />
             </div>
-            <div className="bg-gray flex flex-row items-center justify-between rounded-full px-10 py-0 h-[80px] z-30 absolute top-[15%] left-10 right-10 mx-auto">
+            <NextBar/>
+            {/* <div className="bg-gray flex flex-row items-center justify-between rounded-full px-10 py-0 h-[80px] z-30 absolute top-[15%] left-10 right-10 mx-auto">
               <Image width={200} height={200} src="/images/north.png" alt="logo" />
               <Tabs
                 wrapperClassName="mx-auto"
@@ -114,7 +133,7 @@ export default function RootLayout({
               >
                 Contact Us
               </Button>
-            </div>
+            </div> */}
 
             {children}
 

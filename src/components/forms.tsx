@@ -86,42 +86,18 @@ const Forms = () => {
   return (
     <form>
       <>
-        <section className="grid grid-cols-2 gap-4">
-          {/* <div>
-            <label>Name</label>
-            <Input type="text" name="user_name" required />
-          </div> */}
+        <section className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <Input label="Name" name="user_name" required />
 
-          {/* <div>
-            <label>Email Address</label>
-            <Input type="email" name="user_email" required />
-          </div>   */}
           <Input label="Email" type="email" name="user_email" required />
         </section>
 
         {/* Add some space between the sections */}
         <div className="mb-[20px]"></div>
 
-        <section className="grid grid-cols-2 gap-4">
+        <section className="grid md:grid-cols-2 grid-cols-1 gap-4">
           <Input label="Contact" type="tel" name="user_contact" required />
 
-          {/* Dropdown within a TextField */}
-          {/* <div>
-            <label>Select Location</label>
-            <TextField
-              select
-              value={location}
-              onChange={handleLocationChange}
-              variant="outlined"
-              fullWidth
-              name = "location"
-            >
-              <MenuItem value="">Select an option</MenuItem>
-              <MenuItem value="Ghana">Ghana</MenuItem>
-              <MenuItem value="Abroad">Abroad</MenuItem>
-            </TextField>
-          </div> */}
           <Select
             onValueChange={(val) => {
               if (Array.isArray(val)) {
@@ -144,33 +120,8 @@ const Forms = () => {
               { id: "intl", label: "Abroad", value: "Abroad" },
             ]}
           />
-          {/* <div>
-            <label>Select test type</label>
-            <TextField
-              select
-              value={testType}
-              onChange={handleTestTypeChange}
-              variant="outlined"
-              fullWidth
-              name="test_type"
-            >
-              <MenuItem value="">Select an option</MenuItem>
-              <MenuItem value="OET">OET</MenuItem>
-              <MenuItem value="GMAT">GMAT</MenuItem>
-              <MenuItem value="GRE">GRE</MenuItem>
-              <MenuItem value="TOFEL">TOFEL</MenuItem>
-              <MenuItem value="IELT">IELT</MenuItem>
-            </TextField>
-          </div> */}
-          <Select
-            // onValueChange={(val) => {
-            //   if (val?.[0].id == "gh") {
-            //     handleLocationChange("Ghana")
-            //   } else if (val?.[0].id == "intl") {
-            //     handleLocationChange("Abroad")
-            //   }
-            // }}
 
+          <Select
             onChange={(e) => {
               handleTestTypeChange(e?.target.value ?? "");
             }}
@@ -185,32 +136,7 @@ const Forms = () => {
             ]}
           />
 
-          {/* <div>
-            <label>Type of Tuition</label>
-            <TextField
-              select
-              value={tuitionType}
-              onChange={handleTuitionTypeChange}
-              variant="outlined"
-              fullWidth
-              name="tuition_type"
-            >
-              <MenuItem value="">Select an option</MenuItem>
-              <MenuItem value="OnlineP">Online - Prestige (3 weeks)</MenuItem>
-              <MenuItem value="OnlineN">Online - Normal (2 months)</MenuItem>
-              <MenuItem value="ClassP">Class - Prestige (3 weeks)</MenuItem>
-              <MenuItem value="ClassN">Class - Normal (2 months)</MenuItem>
-            </TextField>
-          </div> */}
           <Select
-            // onValueChange={(val) => {
-            //   if (val?.[0].id == "gh") {
-            //     handleLocationChange("Ghana")
-            //   } else if (val?.[0].id == "intl") {
-            //     handleLocationChange("Abroad")
-            //   }
-            // }}
-
             onChange={(e) => {
               handleTuitionTypeChange(e?.target.value ?? "");
             }}
@@ -241,12 +167,11 @@ const Forms = () => {
           />
           <div>
             <Input
-              placeholder="Amount to be paid"
+              label="Amount to be paid"
               type="text"
               name="Amount"
               value={amount}
               readonly
-              size="lg"
             />
           </div>
         </section>
