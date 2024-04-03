@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="mb-0 flex flex-col items-end pt-7  justify-end text-white text-sm gap-2">
           <div>@2024 Copyright North Devon Recruitment</div>
           <div>22 Falcons Drive, SpringField, MK6 3HJ</div>
-          <div className="font-light">Website designed by: KwapBoysTech</div>
+          
         </div>
       </div>
     </footer>

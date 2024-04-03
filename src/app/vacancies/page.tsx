@@ -84,14 +84,40 @@ const Vancancies = () => {
                         Banking & non-banking Professionals
                       </Heading>
                       <p>
-                        The worlds leading financial services firm, BARCLAYS, is
+                        The worlds leading financial services firm, is
                         hiring banking & non-banking Professionals at various
                         levels. Those roles are oepn to all, including
                         applicants based outside the UK.
                       </p>
                       <div className="w-1/2">
                         <Button className="mt-5" rounded size="lg" fullWidth>
-                          Book
+                          Apply
+                        </Button>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </div>
+              <div className="embla__slide">
+                {" "}
+                <div className="flex-shrink-0 w-[370.3px]">
+                  <Card className="w-full h-[320px] bg-gray">
+                    <div className="flex flex-col h-full justify-between">
+                      <Heading variant="h4">
+                      Physician Assistant
+                      </Heading>
+                      <p>
+                      For our Local Health care service in Ghana
+                      <h5>REQUIREMENT</h5>
+                      <ul className="bullet-list">
+                        <li>CV</li>
+                        <li>School Certificate</li>
+                        <li>License with medical and Dental Council with your registration number</li>
+                      </ul>
+                      </p>
+                      <div className="w-1/2">
+                        <Button className="mt-5" rounded size="lg" fullWidth>
+                          Apply
                         </Button>
                       </div>
                     </div>
@@ -107,85 +133,22 @@ const Vancancies = () => {
                         Banking & non-banking Professionals
                       </Heading>
                       <p>
-                        The worlds leading financial services firm, BARCLAYS, is
+                        The worlds leading financial services firm, is
                         hiring banking & non-banking Professionals at various
                         levels. Those roles are oepn to all, including
                         applicants based outside the UK.
                       </p>
                       <div className="w-1/2">
                         <Button className="mt-5" rounded size="lg" fullWidth>
-                          Book
+                          Apply
                         </Button>
                       </div>
                     </div>
                   </Card>
                 </div>
               </div>
-              <div className="embla__slide">
-                {" "}
-                <div className="flex-shrink-0 w-[370.3px]">
-                  <Card className="w-full h-[320px] bg-gray">
-                    <div className="flex flex-col h-full justify-between">
-                      <Heading variant="h4">
-                        Banking & non-banking Professionals
-                      </Heading>
-                      <p>
-                        The worlds leading financial services firm, BARCLAYS, is
-                        hiring banking & non-banking Professionals at various
-                        levels. Those roles are oepn to all, including
-                        applicants based outside the UK.
-                      </p>
-                      <div className="w-1/2">
-                        <Button className="mt-5" rounded size="lg" fullWidth>
-                          Book
-                        </Button>
-                      </div>
-                    </div>
-                  </Card>
-                </div>
-              </div>
-              <div className="embla__slide">
-                {" "}
-                <div className="flex-shrink-0 w-[370.3px]">
-                  <Card className="w-full h-[320px] bg-gray">
-                    <div className="flex flex-col h-full justify-between">
-                      <Heading variant="h4">
-                        Banking & non-banking Professionals
-                      </Heading>
-                      <p>
-                        The worlds leading financial services firm, BARCLAYS, is
-                        hiring banking & non-banking Professionals at various
-                        levels. Those roles are oepn to all, including
-                        applicants based outside the UK.
-                      </p>
-                      <div className="w-1/2">
-                        <Button className="mt-5" rounded size="lg" fullWidth>
-                          Book
-                        </Button>
-                      </div>
-                    </div>
-                  </Card>
-                </div>
-              </div>
-              <div className="embla__slide">
-                <div className="flex-shrink-0 w-[370.3px]">
-                  <Card className="w-full h-[320px] bg-gray">
-                    <div className="flex flex-col h-full justify-between">
-                      <Heading variant="h3">Are you based in the UK?</Heading>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit.Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit.
-                      </p>
-                      <div className="w-1/2">
-                        <Button className="mt-5" rounded size="lg" fullWidth>
-                          Button
-                        </Button>
-                      </div>
-                    </div>
-                  </Card>
-                </div>
-              </div>
+             
+           
             </div>
           </div>
         </section>
@@ -282,7 +245,7 @@ const Vancancies = () => {
                 <Heading variant="h3" className="mb-3">
                   Work Hours
                 </Heading>
-                <p>Monday - Friday: 8:00am - 5:00am</p>
+                <p>Monday - Friday: 9:30am - 5:30pm</p>
               </div>
             </Card>
 

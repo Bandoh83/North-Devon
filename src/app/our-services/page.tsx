@@ -48,7 +48,7 @@ const OurServices = () => {
     <div className="w-screen">
       <>
         <section
-          className={`h-[527px] overflow-hidden relative bg-[url('/images/doctors.jpg')] bg-no-repeat bg-center bg-auto md:bg-cover opacity-90 w-[100vw] `}
+          className={`h-[627px] overflow-hidden relative bg-[url('/images/portrait-nurse.jpg')] bg-no-repeat bg-center bg-auto md:bg-cover opacity-90 w-[100vw] `}
         ></section>
 
         <div className="sm:w-[94%] text-xs sm:text-[14px] w-[600px] mx-2  sm:mx-auto my-8 sm:px-10">
@@ -235,8 +235,8 @@ const OurServices = () => {
             </Button>
             
             <div className="flex flex-row items-center justify-start gap-3 mb-9">
-              <Image isBlurred width={76} height={76} src="/images/bc.jpg"/>
-              <small>British council approved</small>
+              <Image  width={120} height={120} src="/images/bc.jpg"/>
+              <h3>British council approved Registration centre</h3>
             </div>
           </div>
           <Card

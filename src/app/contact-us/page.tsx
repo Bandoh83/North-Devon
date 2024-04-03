@@ -11,19 +11,26 @@ import { Formik } from "formik";
 import DateInput from "@/components/forms/DateInput";
 import * as Yup from "yup";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
-import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronLeft, FaLinkedinIn } from "react-icons/fa";
 import KumasiMapSearch from "../../components/KumasiMapSearch";
 import AccraMapSearch from "../../components/AccraMapSearch";
 import { IoMdClock, IoMdPhonePortrait } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 import Textarea from "@/components/forms/Textarea";
 import Checkbox from "@/components/forms/Checkbox";
+import { IconButton } from "@/components/Button/IconButton";
+import { FacebookIcon } from "@/icons";
+import { Image, Link } from "@nextui-org/react";
+import { BiLogoFacebookCircle } from "react-icons/bi";
+import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
+
 
 const ContactUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return (
+
+  return(
     <>
       <div className="w-screen ">
         <section className="h-[527px] overflow-hidden relative bg-[url('/images/new-contact-us.jpg')] bg-no-repeat bg-center bg-cover opacity-90 ">
@@ -37,36 +44,33 @@ const ContactUs = () => {
           <div className="flex w-[60%] mx-auto flex-col justify-center gap-5">
             <div className="flex items-center justify-start gap-4">
               <IoMdPhonePortrait className="w-10 h-10 text-primary" />
-              <p className="font-bold">+44 (208) 144-0526</p>
+              <p className="font-bold">+233 530 610 013</p>
             </div>
             <div className="flex mb-0 flex-row items-center justify-start gap-4">
               <IoLocationOutline className="w-10 h-10 text-primary" />
-              <p className="font-bold">Head Office</p>
+              <p className="font-bold">Kumasi Office</p>
             </div>
             <div className="flex pt-0 -mt-4 flex-col items-start justify-start gap-1 pl-14">
-              <small>Americas</small>
-              <small>18A South Road, Paget</small>
-              <small>Pg04, Bermuda</small>
+              <small>The Lancaster</small>
+              <small>Kumasi City</small>
+              <small>The Former Golden Tulip Hotel</small>
             </div>
             <div className="flex pt-0  flex-col items-start justify-start gap-1 pl-14">
-              <small>UK Office</small>
-              <small>7 Bell Yard, London, UK</small>
-              <small>WC2A 2JR</small>
+            <p className="font-bold">Accra Office</p>
+              <small> City Galleria, 4th Floor</small>
+              <small>Opposite the Accra Mall</small>
+              <small>Off Spintex Road</small>
             </div>
-            <div className="flex pt-0  flex-col items-start justify-start gap-1 pl-14">
-              <small>European Office</small>
-              <small>7 Bell Yard, London, UK</small>
-              <small>WC2A 2JR</small>
-            </div>
+            
 
             <div className="flex mb-0 flex-row items-center justify-start gap-4">
               <IoMdClock className="w-10 h-10 text-primary" />
               <p className="font-bold">Business Hours</p>
             </div>
             <div className="flex pt-0 -mt-4 flex-col items-start justify-start gap-1 pl-14">
-              <small>Americas</small>
-              <small>18A South Road, Paget</small>
-              <small>Pg04, Bermuda</small>
+              <small>Mondays - Fridays</small>
+              <small>9:30am - 5:30pm</small>
+             
             </div>
           </div>
         </div>
@@ -81,13 +85,13 @@ const ContactUs = () => {
                 <Textarea minRows={10} placeholder="Type in your message" />
               </div>
 
-              <Checkbox color="secondary">I am not a robot</Checkbox>
+              <Checkbox color="primary">I am not a robot</Checkbox>
 
               <Button
                 size="lg"
                 fullWidth
                 className="p-4"
-                color="secondary"
+                color="primary"
                 rounded
               >
                 Send Message
@@ -112,8 +116,8 @@ const ContactUs = () => {
               <Heading variant="h3" className="mb-3">
                 Work Hours
               </Heading>
-              <p className="">Mondays - Friday: 8:00am - 5:00pm</p>
-              <p className="">Saturdays: 10:00am - 4:00pm</p>
+              <p className="">Mondays - Friday: 9:30am - 5:30pm</p>
+              
             </div>
           </Card>
           <KumasiMapSearch />
@@ -137,8 +141,8 @@ const ContactUs = () => {
               <Heading variant="h3" className="mb-3">
                 Work Hours
               </Heading>
-              <p className="">Mondays - Friday: 8:00am - 5:00pm</p>
-              <p className="">Saturdays: 10:00am - 4:00pm</p>
+              <p className="">Mondays - Friday: 9:30am - 5:30pm</p>
+              
             </div>
           </Card>
         </section>
@@ -150,26 +154,43 @@ const ContactUs = () => {
             padded={false}
             className="p-10 m-6 full h-[500px] flex flex-row items-center justify-start gap-12 cursor-pointer"
           >
-            <Card className="bg-primary w-1/2 text-white h-full pt-8 flex flex-col items-center justify-center gap-5">
-              <p className="w-3/4">
-                Join our subscription and get instant updates about offers and
-                discounts
-              </p>
-              <Input
-                className="bg-white rounded-full w-3/4"
-                rounded
-                size="lg"
-                append={
-                  <Button className="px-8" rounded size="lg" variant="solid">
-                    Join
-                  </Button>
-                }
-                placeholder="Enter email here..."
-              />
-              <p className="text-secondary w-3/4 pl-5">
-                Please read Terms and Conditions before subscribing to the news
-              </p>
-            </Card>
+            <Card className="bg-primary w-1/2 text-white h-[290px] pt-8 flex flex-col">
+            <Heading variant="h6">
+              Follow us on our social media platforms
+
+            </Heading>
+
+            <IconButton rounded variant="link" color="secondary">
+              <Link
+                isExternal
+                href="https://www.facebook.com/profile.php?id=61554625350987&mibextid=LQQJ4d"
+              >
+                <FacebookIcon className="w-5 h-5" />
+              </Link>
+            </IconButton>
+
+            <div>
+              <a href="https://www.facebook.com/profile.php?id=61554625350987&mibextid=LQQJ4d" className="flex items-center gap-4">
+                <BiLogoFacebookCircle size={35} />
+                <span>Facebook</span>
+              </a>
+
+              <a href="https://www.instagram.com/p/C1B_jKvrmnK/?igshid=ZDE1MWVjZGVmZQ==" className="flex items-center gap-4">
+                <AiFillInstagram size={35} />
+                <span>Instagram</span>
+              </a>
+
+              <a href="https://www.linkedin.com/company/northdevon/" className="flex items-center gap-4">
+                <FaLinkedinIn size={35} />
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="https://youtube.com/@North_Devon?si=hACpn82PBwxHVpbo" className="flex items-center gap-4">
+                <AiFillYoutube size={35} />
+                <span>YouTube</span>
+              </a>
+            </div>
+          </Card>
             <div className="w-1/2 h-[420px] flex flex-col items-start justify-start gap-4 p-0">
               <Heading variant="h3" className="text-secondary p-0 m-0">
                 Fill forms to book appointment
@@ -324,26 +345,15 @@ const ContactUs = () => {
                 },
                 content: (
                   <p>
-                    enestado de desarrollo. Muchas versioneshan evolucion ado a
-                    través de los añosalgunas veces por accidente, otras veces
-                    apropósito (por ejemplo insertándole humor y cosas por el
-                    estilo). leer. Muc hos paquetes de autoedicióny editores de
-                    páginas web usan el Lorem Ipsum como su texto por defecto, y
-                    al hacer una búsqueda de Lorem Ipsum va a dar por resultado
-                    muchos sitios web que usan este texto si se encuentran ene
-                    stado de apropósito (por ejemplo insertándole humor y cosas
-                    por el estilo). leer. Muc hos paquetes de autoedicióny
-                    editores de páginas web usan el Lorem Ipsum como su texto
-                    por defecto, y al hacer una búsqueda de Lorem Ipsum va a dar
-                    por resultado muchos sitios web que usan este texto si se
-                    encuentran ene stado de
+                    You can take it as many times as you want. There is no limit. There is
+                    no time limit to wait between tests either.
                   </p>
                 ),
                 label: (
                   <div className="w-full flex flex-row items-start justify-start gap-4">
                     <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
-                    <Heading variant="h3">
-                      Sample of a frequently asked question
+                    <Heading variant="h4">
+                      How many times can I take my IELTS test?
                     </Heading>
                   </div>
                 ),
@@ -356,26 +366,20 @@ const ContactUs = () => {
                 },
                 content: (
                   <p>
-                    enestado de desarrollo. Muchas versioneshan evolucion ado a
-                    través de los añosalgunas veces por accidente, otras veces
-                    apropósito (por ejemplo insertándole humor y cosas por el
-                    estilo). leer. Muc hos paquetes de autoedicióny editores de
-                    páginas web usan el Lorem Ipsum como su texto por defecto, y
-                    al hacer una búsqueda de Lorem Ipsum va a dar por resultado
-                    muchos sitios web que usan este texto si se encuentran ene
-                    stado de apropósito (por ejemplo insertándole humor y cosas
-                    por el estilo). leer. Muc hos paquetes de autoedicióny
-                    editores de páginas web usan el Lorem Ipsum como su texto
-                    por defecto, y al hacer una búsqueda de Lorem Ipsum va a dar
-                    por resultado muchos sitios web que usan este texto si se
-                    encuentran ene stado de
+                    NCSBN has conducted multi-year studies to support the development of Next Generation NCLEX
+                    (NGN). Research studies analyzed items and documented the validity of
+                    these items to measure clinical judgment. Validity evidence included 1)
+                    the extent to which clinical judgment can be measured, 2) numerous
+                    item writing panels comprised of nurse faculty to write items aligned
+                    with the NCSBN Clinical Judgment Measurement Model (NCJMM), 3) nursing
+                    experts (nursing faculty, clinical educators, clinicians and numerous committees made up of experienced nursing experts) reviewed items to ensure the measurement and content was accurate and correctly classified document the validity of the items to measure clinical judgment, and 4) ensuring that items are statistically sound and reflect contemporary practice.
                   </p>
                 ),
                 label: (
                   <div className="w-full flex flex-row items-start justify-start gap-4">
                     <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
-                    <Heading variant="h3">
-                      Sample of a frequently asked question
+                    <Heading variant="h4">
+                      What standards does NCSBN use when developing a new test?
                     </Heading>
                   </div>
                 ),
@@ -388,26 +392,18 @@ const ContactUs = () => {
                 },
                 content: (
                   <p>
-                    enestado de desarrollo. Muchas versioneshan evolucion ado a
-                    través de los añosalgunas veces por accidente, otras veces
-                    apropósito (por ejemplo insertándole humor y cosas por el
-                    estilo). leer. Muc hos paquetes de autoedicióny editores de
-                    páginas web usan el Lorem Ipsum como su texto por defecto, y
-                    al hacer una búsqueda de Lorem Ipsum va a dar por resultado
-                    muchos sitios web que usan este texto si se encuentran ene
-                    stado de apropósito (por ejemplo insertándole humor y cosas
-                    por el estilo). leer. Muc hos paquetes de autoedicióny
-                    editores de páginas web usan el Lorem Ipsum como su texto
-                    por defecto, y al hacer una búsqueda de Lorem Ipsum va a dar
-                    por resultado muchos sitios web que usan este texto si se
-                    encuentran ene stado de
+                    Each nursing regulatory body (NRB) has its own eligibility
+                    requirements to take the NCLEX. NCSBN does not maintain a list
+                    of requirements for each NRB. Contact the NRB where you are
+                    seeking licensure/registration for their requirements
+                    (applicable only to NRBs of the U.S., Canada and Australia).
                   </p>
                 ),
                 label: (
                   <div className="w-full flex flex-row items-start justify-start gap-4">
                     <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
-                    <Heading variant="h3">
-                      Sample of a frequently asked question
+                    <Heading variant="h4">
+                      What are the eligibility requirements for taking the NCLEX?
                     </Heading>
                   </div>
                 ),
@@ -420,26 +416,17 @@ const ContactUs = () => {
                 },
                 content: (
                   <p>
-                    enestado de desarrollo. Muchas versioneshan evolucion ado a
-                    través de los añosalgunas veces por accidente, otras veces
-                    apropósito (por ejemplo insertándole humor y cosas por el
-                    estilo). leer. Muc hos paquetes de autoedicióny editores de
-                    páginas web usan el Lorem Ipsum como su texto por defecto, y
-                    al hacer una búsqueda de Lorem Ipsum va a dar por resultado
-                    muchos sitios web que usan este texto si se encuentran ene
-                    stado de apropósito (por ejemplo insertándole humor y cosas
-                    por el estilo). leer. Muc hos paquetes de autoedicióny
-                    editores de páginas web usan el Lorem Ipsum como su texto
-                    por defecto, y al hacer una búsqueda de Lorem Ipsum va a dar
-                    por resultado muchos sitios web que usan este texto si se
-                    encuentran ene stado de
+                    Your results will be posted to you 13-days after you have taken your test.
+                    It is possible to get your results by sms or online at some test centers.
+                    Contact them to find out. However, these are times when results are
+                    delayed longer than 13 days.
                   </p>
                 ),
                 label: (
                   <div className="w-full flex flex-row items-start justify-start gap-4">
                     <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
-                    <Heading variant="h3">
-                      Sample of a frequently asked question
+                    <Heading variant="h4">
+                      how long does it take for my test results to arrive?
                     </Heading>
                   </div>
                 ),
@@ -448,173 +435,10 @@ const ContactUs = () => {
             variant="pills"
           />
         </div>
+        </div>
 
-        {/* <section className="p-32 bg-gray">
-        <Heading className="ml-10 p-10" variant="h1">
-          Frequently Asked Questions
-        </Heading>
-
-        <Accordion
-          items={[
-            {
-              id: "1",
-
-              content: (
-                <p>
-                  id: "1", label: "Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
-                </p>
-              ),
-              label: (
-                <div className="flex items-center h-16">
-                  <svg
-                    viewBox="0 0 1024 1024"
-                    fill="currentColor"
-                    height="2em"
-                    width="2em"
-                    className="mr-2"
-                  >
-                    <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" />
-                    <path d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z" />
-                  </svg>
-                  <Heading variant="h2">
-                    {" "}
-                    Sample of a frequently asked question
-                  </Heading>
-                </div>
-              ),
-            },
-            {
-              id: "1",
-              content: (
-                <p>
-                  id: "1", label: "Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
-                </p>
-              ),
-              label: (
-                <div className="flex items-center h-16">
-                  <svg
-                    viewBox="0 0 1024 1024"
-                    fill="currentColor"
-                    height="2em"
-                    width="2em"
-                    className="mr-2"
-                  >
-                    <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" />
-                    <path d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z" />
-                  </svg>
-                  <Heading variant="h2">
-                    {" "}
-                    Sample of a frequently asked question
-                  </Heading>
-                </div>
-              ),
-            },
-            {
-              id: "1",
-              content: (
-                <p>
-                  id: "1", label: "Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
-                </p>
-              ),
-              label: (
-                <div className="flex items-center h-16">
-                  <svg
-                    viewBox="0 0 1024 1024"
-                    fill="currentColor"
-                    height="2em"
-                    width="2em"
-                    className="mr-2"
-                  >
-                    <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" />
-                    <path d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z" />
-                  </svg>
-                  <Heading variant="h2">
-                    {" "}
-                    Sample of a frequently asked question
-                  </Heading>
-                </div>
-              ),
-            },
-            {
-              id: "1",
-              content: (
-                <p>
-                  id: "1", label: "Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
-                </p>
-              ),
-              label: (
-                <div className="flex items-center h-16">
-                  <svg
-                    viewBox="0 0 1024 1024"
-                    fill="currentColor"
-                    height="2em"
-                    width="2em"
-                    className="mr-2"
-                  >
-                    <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" />
-                    <path d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z" />
-                  </svg>
-                  <Heading variant="h2">
-                    {" "}
-                    Sample of a frequently asked question
-                  </Heading>
-                </div>
-              ),
-            },
-            {
-              id: "1",
-              content: (
-                <p>
-                  id: "1", label: "Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
-                </p>
-              ),
-              label: (
-                <div className="flex items-center h-16">
-                  <svg
-                    viewBox="0 0 1024 1024"
-                    fill="currentColor"
-                    height="2em"
-                    width="2em"
-                    className="mr-2"
-                  >
-                    <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" />
-                    <path d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0130.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1080 0 40 40 0 10-80 0z" />
-                  </svg>
-                  <Heading variant="h2">
-                    {" "}
-                    Sample of a frequently asked question
-                  </Heading>
-                </div>
-              ),
-            },
-          ]}
-          variant="pills"
-          className=""
-        />
-      </section> */}
-      </div>
-    </>
-  );
-};
-
-export default ContactUs;
+      </>
+    );
+  };
+  
+  export default ContactUs;

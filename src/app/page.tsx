@@ -50,7 +50,7 @@ const Home = () => {
     <div className="w-screen">
       <>
         <section
-          className={`h-[527px] overflow-hidden relative bg-[url('/images/doctors.jpg')] bg-no-repeat bg-center bg-auto md:bg-cover opacity-90 w-[100vw] `}
+          className={`h-[600px] overflow-hidden relative bg-[url('/images/portrait-nurse.jpg')] bg-no-repeat bg-center bg-auto md:bg-cover opacity-90 w-[100vw] `}
         ></section>
 
         <div className="sm:w-[94%] text-xs sm:text-[14px] w-[600px] mx-2  sm:mx-auto my-8 sm:px-10">
@@ -70,13 +70,6 @@ const Home = () => {
                 <Image
                   src="/images/nhs.jpg"
                   alt="nhs"
-                  className="w-[120px] h-[80px]"
-                />
-              </div>
-              <div className="embla__slide">
-                <Image
-                  src="/images/bc.jpg"
-                  alt="british council"
                   className="w-[120px] h-[80px]"
                 />
               </div>
@@ -104,7 +97,7 @@ const Home = () => {
               <div className="embla__slide">
                 <Image
                   alt="netflix"
-                  src="/images/netflix.jpg"
+                  src="/images/netflix-logo.png"
                   className="w-[120px] h-[80px]"
                 />
               </div>
@@ -126,12 +119,12 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="bg-gray w-full h-[900px]  p-8 flex flex-col md:flex-row items-start md:items-center justify-start gap-8">
+        <div className="bg-gray w-full h-[670px]  p-8 flex flex-col md:flex-row items-start md:items-center justify-start gap-8">
           <Card
             shadow
             rounded
             padded={false}
-            className="p-4 w-full flex justify-start md:w-7/12  md:flex md:flex-row md:items-start md:justify-start gap-4 cursor-pointer"
+            className="p-4 w-full h-[520px] flex justify-start md:w-7/12  md:flex md:flex-row md:items-start md:justify-start gap-4 cursor-pointer"
           >
             <div className="w-full relative md:w-1/2 h-full md:h-1/2 px-4 pb-2 flex flex-col  md:items-center md:justify-center  gap-2">
               <Image
@@ -139,15 +132,15 @@ const Home = () => {
                 isZoomed
                 src="/images/family.jpg"
                 alt="family"
-                className="p-0 m-0 object-cover rounded-3xl object-center "
-                sizes="100vw"
+                className="p-0 mt-24 object-cover rounded-3xl object-center "
+                sizes="100w"
               />
               <Image
                 isBurred
                 isZoomed
                 src="/images/teachers.jpg"
                 alt="teachers"
-                className="hidden md:flex"
+                className="hidden md:flex mb-10"
               />
             </div>
             <div className="hidden md:flex w-1/2 flex-col h-full p-0">
@@ -189,7 +182,7 @@ const Home = () => {
             </Button>
           </div>
         </div>
-        <div className="w-full overflow-hidden p-8 md:flex md:flex-row md:items-center md:justify-start gap-8 mb-0">
+        <div className="w-full overflow-hidden p-8 md:flex md:flex-row md:items-center md:justify-start gap-4 mb-0">
           <div className="w-full md:w-5/12 pl-8 h-[450px] flex flex-col items-start justify-start gap-4">
             <p className="font-semibold">Our Services</p>
             <Heading variant="h3">How we work</Heading>
@@ -229,12 +222,16 @@ const Home = () => {
                 color="#E9722B"
                 className="w-8 h-8"
               />
-              <p className="font-semibold">400+ Satisfied Customers</p>
+              <p className="font-semibold">700+ Satisfied Customers</p>
             </div>
 
             <Button size="lg" className="px-8" rounded>
               Get in touch
             </Button>
+            <div className =" hidden md:flex flex-row items-center justify-start gap-3 mb-9"> 
+              <Image   width={100} height={100} src="/images/bc.jpg"></Image>
+             <h3> British Council approved registration centre</h3>
+            </div>
           </div>
           <Card
             shadow={false}
@@ -354,10 +351,9 @@ const Home = () => {
               alt="books"
             />
             <div className="flex flex-col items-start justify-start gap-4 mx-8 mt-4">
-              <Heading variant="h6">Lorem ipsum dolor sit amet</Heading>
+              <Heading variant="h6">ND Healthcare </Heading>
               <p className="text-secondary-gray text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+              NDR is introducing an online OET class tailored around your needs{" "}
               </p>
               <Button size="lg" className="px-8" rounded>
                 Read more
@@ -370,10 +366,10 @@ const Home = () => {
               padded
               className="flex flex-col items-start justify-start gap-5"
             >
-              <Heading variant="h6">Lorem ipsum dolor sit amet</Heading>
+              <Heading variant="h6">News Update</Heading>
               <p className="text-secondary-gray text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+              Primary school teachers and secondary teachers with a 
+                recent teaching experience{" "}
               </p>
               <Button size="lg" className="px-8" rounded>
                 Read more
@@ -384,10 +380,10 @@ const Home = () => {
               padded
               className="flex flex-col items-start justify-start gap-5"
             >
-              <Heading variant="h6">Lorem ipsum dolor sit amet</Heading>
+              <Heading variant="h6">News Update</Heading>
               <p className="text-secondary-gray text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+              A school in UK is recruiting Geography teacher.
+                Deadline 25/03/2024{" "}
               </p>
               <Button size="lg" className="px-8" rounded>
                 Read more
@@ -425,8 +421,8 @@ const Home = () => {
           >
             <Card className="bg-primary w-1/2 text-white h-full pt-8 hidden md:flex flex-col items-center justify-center gap-5">
               <p className="w-3/4">
-                Join our subscription and get instant updates about offers and
-                discounts
+              Subscribe to our newsletter for product updates and be the first to know about our specials and promotions
+              
               </p>
               <Input
                 className="bg-white rounded-full w-3/4"
@@ -439,9 +435,7 @@ const Home = () => {
                 }
                 placeholder="Enter email here..."
               />
-              <p className="text-secondary w-3/4 pl-5">
-                Please read Terms and Conditions before subscribing to the news
-              </p>
+              
             </Card>
             <div className="md:w-1/2 w-full h-[420px] flex flex-col items-start justify-start gap-4 p-0">
               <Heading variant="h3" className="text-secondary p-0 m-0 text-lg md:text-2xl">
@@ -566,7 +560,7 @@ const Home = () => {
                       onBlur={handleBlur}
                       variant="underlined"
                       label="Select our office"
-                      options={[{ id: "1", label: "SpringFiels" }]}
+                      options={[{ id: "1", label: "Accra" },{ id: "1", label: "Kumasi" }]}
                     />
                     <Button
                       fullWidth

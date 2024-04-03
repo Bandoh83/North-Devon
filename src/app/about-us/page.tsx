@@ -20,19 +20,19 @@ const AboutUs = () => {
           className={`images_left grid grid-cols-2 grid-rows-2 gap-4 bg-[#ffffff] rounded-3xl h-3/4 px-2 md:px-5 pt-5 ${styles.card}`}
         >
           <div
-            className={`grid grid-cols-2 w-screen md:w-[540px] h-[230px] gap-[2px] md:gap-4 ${styles.card} ${styles.innercard}`}
+            className={`grid grid-cols-2 w-screen md:w-[600px] h-[230px] gap-[2px] md:gap-4 ${styles.card} ${styles.innercard}`}
           >
             <Image
               isZoomed
               isBlurred
-              className="md:w-[270px] w-[240px] h-[230px] rounded-2xl"
+              className="md:w-[270px] w-[260px] h-[230px] rounded-2xl"
               src="/images/image01_left.jpg"
               alt={"image01"}
             />
             <Image
               isZoomed
               isBlurred
-              className="md:w-[290px] w-[200px] h-[230px]  rounded-2xl"
+              className="md:w-[290px] w-[230px] h-[230px]  rounded-2xl"
               src="/images/image02_right.jpg"
               alt={"image02"}
             />
@@ -54,25 +54,31 @@ const AboutUs = () => {
             <Heading variant="h5">More About Us</Heading>
             <Heading variant="h2">Our Core Values</Heading>
             <p className="text-secondary-gray pb-9 text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore ma gna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure do
+            <ul>
+                <li>Value our customers and fellow employees</li>
+                <li>Achieve our goals and aspirations</li>
+                <li>Learn and encourage a culture of knowledge, expertise and accountability.</li>
+                <li>Understand our business, our customers and fellow employees.</li>
+                <li>Excel in everything we do.</li>
+
+              </ul>
             </p>
           </div>
 
           <div className="missionStatement space-y-4">
             <Heading variant="h2">Mission Statement</Heading>
             <p className="text-secondary-gray pb-4 text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore ma gna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure do
+            Our mission is to empower individuals worldwide by facilitating access to 
+            exceptional educational opportunities, career pathways, and healthcare services. 
+            Our commitment extends to guiding aspiring students towards their academic goals, 
+            connecting talented professionals with global career prospects, and addressing critical
+             healthcare staffing needs. 
             </p>
             <p className="text-secondary-gray text-sm md:text-base">
-              eiusmod tempor incididunt ut labore et dolore ma gna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure do
+            Through personalized support, innovative strategies, and unwavering 
+            dedication, we strive to enhance lives and foster success on a global scale. We prioritize excellence, 
+            integrity, and inclusivity in all aspects of our operations, ensuring 
+            sustainable growth and meaningful impact in the communities we serve.
             </p>
           </div>
         </div>
@@ -88,20 +94,20 @@ const AboutUs = () => {
               Vision Statement
             </Heading>
             <p className="pb-9 text-sm md:text-base">
-              enestado de desarrollo. Muchas versioneshan evolucion ado a través
-              de los añosalgunas veces por accidente, otras veces apropósito
-              (por ejemplo insertándole humor y cosas por el estilo). leer.
-              Muchos paquetes de autoedicióny editores de páginas web usan el
-              Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de
-              Lorem Ipsum va a dar por resultado muchos sitios web que usan
-              este texto si se encuentran ene stado de
+            Our vision is to be the premier global recruitment agency, renowned for our 
+            commitment to excellence in study abroad programs, international and local 
+            recruitment, healthcare staffing, and standardized test preparation. 
+            We aspire to be the catalysts of transformational journeys, connecting 
+            individuals with opportunities that transcend borders and boundaries. 
+            By leveraging cutting-edge technology, fostering strategic partnerships, 
+            and cultivating a culture of continuous innovation, we aim to revolutionize the recruitment industry. 
             </p>
             <p className="text-sm md:text-base">
-              apropósito (por ejemplo insertándole humor y cosas por el estilo).
-              leer. Muchos paquetes de autoedicióny editores de páginas web usan
-              el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda
-              de Lorem Ipsum va a dar por resultado muchos sitios web que usan
-              este texto si se encuentran ene stado de
+            Our vision encompasses a world where every individual has access to quality education, 
+            fulfilling careers, and superior healthcare services, irrespective of geographic 
+            location or socioeconomic status. Through our unwavering dedication to integrity, 
+            diversity, and client satisfaction, we seek to set new standards of excellence 
+            and become the trusted partner of choice for individuals and organizations alike.
             </p>
           </div>
           <div className="Null_icon">

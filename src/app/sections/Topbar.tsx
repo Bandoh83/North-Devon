@@ -1,10 +1,9 @@
 import IconButton from "@/components/Button/IconButton";
 import { FacebookIcon } from "@/icons/index";
 import { Link } from "@nextui-org/react";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import { BsTelephoneFill } from "react-icons/bs";
 import { GoClockFill } from "react-icons/go";
-import { ImInstagram } from "react-icons/im";
 import { IoMdMail } from "react-icons/io";
 
 const TopBar = () => {
@@ -56,6 +55,22 @@ const TopBar = () => {
             href="https://www.instagram.com/p/C1B_jKvrmnK/?igshid=ZDE1MWVjZGVmZQ=="
           >
             <AiFillInstagram className="w-6 h-6" />
+          </Link>
+        </IconButton>
+        <IconButton rounded variant="link" color="secondary">
+          <Link
+            isExternal
+            href="https://youtube.com/@North_Devon?si=hACpn82PBwxHVpbo"
+          >
+            <AiFillYoutube className="w-6 h-6" />
+          </Link>
+        </IconButton>
+        <IconButton rounded variant="link" color="secondary">
+          <Link
+            isExternal
+            href="https://www.linkedin.com/company/northdevon/"
+          >
+            <AiFillLinkedin className="w-6 h-6" />
           </Link>
         </IconButton>
       </div>
