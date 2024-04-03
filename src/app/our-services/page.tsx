@@ -233,12 +233,17 @@ const OurServices = () => {
             <Button size="lg" className="px-8" rounded>
               Get in touch
             </Button>
+            
+            <div className="flex flex-row items-center justify-start gap-3 mb-9">
+              <Image isBlurred width={76} height={76} src="/images/bc.jpg"/>
+              <small>British council approved</small>
+            </div>
           </div>
           <Card
             shadow={false}
             rounded
             padded={false}
-            className={`p-4 mt-8 md:mb-8 w-full h-[500px] ${styles.card} flex flex-col  md:items-center md:justify-start justify-center gap-4 cursor-pointer`}
+            className={`p-4 md:mt-8 mt-16 md:mb-8 w-full h-[500px] ${styles.card} flex flex-col  md:items-center md:justify-start justify-center gap-4 cursor-pointer`}
           >
             <div className={` h-full p-0 ${styles.card} ${styles.innercard}`}>
               <Image

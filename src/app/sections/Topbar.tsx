@@ -9,7 +9,7 @@ import { IoMdMail } from "react-icons/io";
 
 const TopBar = () => {
   return (
-    <div className="flex flex-row items-center justify-between">
+    <div className="w-full hidden md:flex flex-row items-center justify-between ">
       <div className="flex flex-row items-center justify-start gap-10">
         <div className="flex flex-row items-center justify-start gap-3">
           <IoMdMail

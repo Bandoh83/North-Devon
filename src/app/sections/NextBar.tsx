@@ -48,10 +48,11 @@ export default function NextBar() {
     { name: "About Us", path: "/about-us" },
     { name: "Our Services", path: "/our-services" },
     { name: "Vacancies", path: "/vacancies" },
+    { name: "Contact Us", path: "/contact-us" },
   ];
 
   return (
-    <div className="bg-gray flex flex-row items-center justify-between rounded-full px-10 py-0 h-[80px] z-30 absolute top-[15%] left-1 right-1 lg:right-10 lg:left-10 mx-auto">
+    <div className="bg-gray flex flex-row items-center justify-between md:rounded-full px-10 py-0 h-[80px] z-30 absolute top-0 md:top-[15%] left-0 right-0 md:left-1 md:right-1 lg:right-10 lg:left-10 mx-auto">
       <Navbar
         classNames={{
           base: ["bg-gray"],
@@ -113,7 +114,7 @@ export default function NextBar() {
             </Button>
           </NavbarItem>
         </NavbarContent>
-        <NavbarMenu className="w-[96%] mx-auto mt-[120px] rounded-2xl">
+        <NavbarMenu className="w-[96%] h-[5%] mx-auto mt-6  rounded-2xl">
           {menuItems.map((item, index) => (
             <NavbarMenuItem
               isActive={pathname === item.path}

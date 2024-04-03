@@ -14,6 +14,10 @@ import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
 import { FaChevronLeft } from "react-icons/fa";
 import KumasiMapSearch from "../../components/KumasiMapSearch";
 import AccraMapSearch from "../../components/AccraMapSearch";
+import { IoMdClock, IoMdPhonePortrait } from "react-icons/io";
+import { IoLocationOutline } from "react-icons/io5";
+import Textarea from "@/components/forms/Textarea";
+import Checkbox from "@/components/forms/Checkbox";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -21,152 +25,215 @@ const ContactUs = () => {
   }, []);
   return (
     <>
-    
-      <section className="h-[527px] overflow-hidden relative bg-[url('/images/new-contact-us.jpg')] bg-no-repeat bg-center bg-cover opacity-90 ">
-        <p className="text-9xl w-full bg-transparent font-black subpixel-antialiased tracking-wide text-gray opacity-70 absolute bottom-0 left-10 mb-0 pb-0">
-          Contact Us
-        </p>
-      </section>
-      {/* Code goes below here */}
-      <section className="w-full h-[730px] pt-[100px] flex flex-row items-start justify-center gap-5">
-        <Card className=" h-[310px] w-[450px] bg-primary pt-10 px-14 flex flex-col items-start justify-start gap-10 text-white">
-          <div>
-            <Heading variant="h2" className="mb-3">
-              Kumasi Office
-            </Heading>
-            <p className="">
-              The Lancaster Kumasi City
-              <br />
-              The Former Golden Tulip Hotel
-            </p>
-          </div>
+      <div className="w-screen ">
+        <section className="h-[527px] overflow-hidden relative bg-[url('/images/new-contact-us.jpg')] bg-no-repeat bg-center bg-cover opacity-90 ">
+          <p className="md:text-9xl text-7xl w-full bg-transparent font-black subpixel-antialiased tracking-wide text-gray opacity-70 absolute bottom-0 left-10 mb-0 pb-0">
+            Contact Us
+          </p>
+        </section>
 
-          <div className="mt-4">
-            <Heading variant="h3" className="mb-3">
-              Work Hours
-            </Heading>
-            <p className="">Mondays - Friday: 8:00am - 5:00pm</p>
-            <p className="">Saturdays: 10:00am - 4:00pm</p>
-          </div>
-        </Card>
-        <KumasiMapSearch />
-      </section>
+        {/* Code goes below here */}
+        <div className="flex w-screen my-8 md:hidden flex-col items-start justify-center  p-4">
+          <div className="flex w-[60%] mx-auto flex-col justify-center gap-5">
+            <div className="flex items-center justify-start gap-4">
+              <IoMdPhonePortrait className="w-10 h-10 text-primary" />
+              <p className="font-bold">+44 (208) 144-0526</p>
+            </div>
+            <div className="flex mb-0 flex-row items-center justify-start gap-4">
+              <IoLocationOutline className="w-10 h-10 text-primary" />
+              <p className="font-bold">Head Office</p>
+            </div>
+            <div className="flex pt-0 -mt-4 flex-col items-start justify-start gap-1 pl-14">
+              <small>Americas</small>
+              <small>18A South Road, Paget</small>
+              <small>Pg04, Bermuda</small>
+            </div>
+            <div className="flex pt-0  flex-col items-start justify-start gap-1 pl-14">
+              <small>UK Office</small>
+              <small>7 Bell Yard, London, UK</small>
+              <small>WC2A 2JR</small>
+            </div>
+            <div className="flex pt-0  flex-col items-start justify-start gap-1 pl-14">
+              <small>European Office</small>
+              <small>7 Bell Yard, London, UK</small>
+              <small>WC2A 2JR</small>
+            </div>
 
-      <section className="w-full h-[550px] pt-[100px] flex flex-row items-start justify-center gap-5 bg-[url('/images/sunset-orange-airplane-airplane-wing-wallpaper-preview.jpg')] bg-no-repeat bg-center bg-cover opacity-90 ">
-        <AccraMapSearch className="" />
-        <Card className=" h-[310px] w-[450px] bg-primary pt-10 px-14 flex flex-col items-start justify-start gap-10 text-white">
-          <div>
-            <Heading variant="h2" className="mb-3">
-              Accra Office
-            </Heading>
-            <p className="">
-              City Galleria, 4th Floor
-              <br />
-              opposite the Accra Mail off the Sprintex Road
-            </p>
+            <div className="flex mb-0 flex-row items-center justify-start gap-4">
+              <IoMdClock className="w-10 h-10 text-primary" />
+              <p className="font-bold">Business Hours</p>
+            </div>
+            <div className="flex pt-0 -mt-4 flex-col items-start justify-start gap-1 pl-14">
+              <small>Americas</small>
+              <small>18A South Road, Paget</small>
+              <small>Pg04, Bermuda</small>
+            </div>
           </div>
+        </div>
 
-          <div className="mt-4">
-            <Heading variant="h3" className="mb-3">
-              Work Hours
-            </Heading>
-            <p className="">Mondays - Friday: 8:00am - 5:00pm</p>
-            <p className="">Saturdays: 10:00am - 4:00pm</p>
-          </div>
-        </Card>
-      </section>
+        <div className="flex w-[90%] mx-auto bg-gray rounded-lg  my-8 md:hidden flex-col items-start gap-4 justify-center  p-6">
+          <Heading>Send us a message</Heading>
+          <form className="w-full">
+            <div className="space-y-4">
+              <Input label="Your Name" />
+              <Input label="Your Email" type="email" />
+              <div className="w-full">
+                <Textarea minRows={10} placeholder="Type in your message" />
+              </div>
 
-      <div className="bg-gray w-full h-[650px] p-10 flex justify-center mt-[200px]">
-        <Card
-          shadow
-          rounded
-          padded={false}
-          className="p-10 m-6 full h-[500px] flex flex-row items-center justify-start gap-12 cursor-pointer"
-        >
-          <Card className="bg-primary w-1/2 text-white h-full pt-8 flex flex-col items-center justify-center gap-5">
-            <p className="w-3/4">
-              Join our subscription and get instant updates about offers and
-              discounts
-            </p>
-            <Input
-              className="bg-white rounded-full w-3/4"
-              rounded
-              size="lg"
-              append={
-                <Button className="px-8" rounded size="lg" variant="solid">
-                  Join
-                </Button>
-              }
-              placeholder="Enter email here..."
-            />
-            <p className="text-secondary w-3/4 pl-5">
-              Please read Terms and Conditions before subscribing to the news
-            </p>
+              <Checkbox color="secondary">I am not a robot</Checkbox>
+
+              <Button
+                size="lg"
+                fullWidth
+                className="p-4"
+                color="secondary"
+                rounded
+              >
+                Send Message
+              </Button>
+            </div>
+          </form>
+        </div>
+        <section className="hidden md:flex w-full h-[730px] pt-[100px]  flex-row items-start justify-center gap-5">
+          <Card className=" h-[310px] w-[450px] bg-primary pt-10 px-14 flex flex-col items-start justify-start gap-10 text-white">
+            <div>
+              <Heading variant="h2" className="mb-3">
+                Kumasi Office
+              </Heading>
+              <p className="">
+                The Lancaster Kumasi City
+                <br />
+                The Former Golden Tulip Hotel
+              </p>
+            </div>
+
+            <div className="mt-4">
+              <Heading variant="h3" className="mb-3">
+                Work Hours
+              </Heading>
+              <p className="">Mondays - Friday: 8:00am - 5:00pm</p>
+              <p className="">Saturdays: 10:00am - 4:00pm</p>
+            </div>
           </Card>
-          <div className="w-1/2 h-[420px] flex flex-col items-start justify-start gap-4 p-0">
-            <Heading variant="h3" className="text-secondary p-0 m-0">
-              Fill forms to book appointment
-            </Heading>
-            <Formik
-              initialValues={{
-                name: "",
-                email: "",
-                phone: "", // can be phone or email
-                date: null,
-                time: null,
-                office: "",
-              }}
-              enableReinitialize
-              validateOnBlur
-              validateOnChange={false}
-              validationSchema={Yup.object({
-                name: Yup.string().trim().required("Name required"),
-                date: Yup.date().required("Pick date"),
-                time: Yup.date().required("Pick time"),
-                email: Yup.string()
-                  .trim()
-                  .email("Invalid email address")
-                  .required("Email address required"),
-                phone: Yup.string().required("Pnone number required"),
-                office: Yup.string().required("Select office"),
-              })}
-              onSubmit={async (values) => {
-                console.log(values);
-              }}
-            >
-              {({
-                values,
-                errors,
-                touched,
-                handleChange,
-                handleBlur,
-                setFieldValue,
-                setFieldError,
-                handleSubmit,
-              }) => (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                  <Input
-                    required
-                    name="name"
-                    value={values.name}
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                    variant="underlined"
-                    label="Enter name"
-                    error={touched.name ? errors.name : undefined}
-                  />
-                  <div className="w-full flex flex-row items-start gap-4">
+          <KumasiMapSearch />
+        </section>
+
+        <section className="w-full h-[550px] pt-[100px] hidden md:flex flex-row items-start justify-center gap-5 bg-[url('/images/sunset-orange-airplane-airplane-wing-wallpaper-preview.jpg')] bg-no-repeat bg-center bg-cover opacity-90 ">
+          <AccraMapSearch className="" />
+          <Card className=" h-[310px] w-[450px] bg-primary pt-10 px-14 flex flex-col items-start justify-start gap-10 text-white">
+            <div>
+              <Heading variant="h2" className="mb-3">
+                Accra Office
+              </Heading>
+              <p className="">
+                City Galleria, 4th Floor
+                <br />
+                opposite the Accra Mail off the Sprintex Road
+              </p>
+            </div>
+
+            <div className="mt-4">
+              <Heading variant="h3" className="mb-3">
+                Work Hours
+              </Heading>
+              <p className="">Mondays - Friday: 8:00am - 5:00pm</p>
+              <p className="">Saturdays: 10:00am - 4:00pm</p>
+            </div>
+          </Card>
+        </section>
+
+        <div className="bg-gray w-full h-[650px] p-10 hidden md:flex justify-center mt-[200px]">
+          <Card
+            shadow
+            rounded
+            padded={false}
+            className="p-10 m-6 full h-[500px] flex flex-row items-center justify-start gap-12 cursor-pointer"
+          >
+            <Card className="bg-primary w-1/2 text-white h-full pt-8 flex flex-col items-center justify-center gap-5">
+              <p className="w-3/4">
+                Join our subscription and get instant updates about offers and
+                discounts
+              </p>
+              <Input
+                className="bg-white rounded-full w-3/4"
+                rounded
+                size="lg"
+                append={
+                  <Button className="px-8" rounded size="lg" variant="solid">
+                    Join
+                  </Button>
+                }
+                placeholder="Enter email here..."
+              />
+              <p className="text-secondary w-3/4 pl-5">
+                Please read Terms and Conditions before subscribing to the news
+              </p>
+            </Card>
+            <div className="w-1/2 h-[420px] flex flex-col items-start justify-start gap-4 p-0">
+              <Heading variant="h3" className="text-secondary p-0 m-0">
+                Fill forms to book appointment
+              </Heading>
+              <Formik
+                initialValues={{
+                  name: "",
+                  email: "",
+                  phone: "", // can be phone or email
+                  date: null,
+                  time: null,
+                  office: "",
+                }}
+                enableReinitialize
+                validateOnBlur
+                validateOnChange={false}
+                validationSchema={Yup.object({
+                  name: Yup.string().trim().required("Name required"),
+                  date: Yup.date().required("Pick date"),
+                  time: Yup.date().required("Pick time"),
+                  email: Yup.string()
+                    .trim()
+                    .email("Invalid email address")
+                    .required("Email address required"),
+                  phone: Yup.string().required("Pnone number required"),
+                  office: Yup.string().required("Select office"),
+                })}
+                onSubmit={async (values) => {
+                  console.log(values);
+                }}
+              >
+                {({
+                  values,
+                  errors,
+                  touched,
+                  handleChange,
+                  handleBlur,
+                  setFieldValue,
+                  setFieldError,
+                  handleSubmit,
+                }) => (
+                  <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                     <Input
-                      name="email"
-                      value={values.email}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      error={touched.email ? errors.email : undefined}
                       required
-                      label="Enter email"
+                      name="name"
+                      value={values.name}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
                       variant="underlined"
+                      label="Enter name"
+                      error={touched.name ? errors.name : undefined}
                     />
-                    {/* <PhoneInput
+                    <div className="w-full flex flex-row items-start gap-4">
+                      <Input
+                        name="email"
+                        value={values.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        error={touched.email ? errors.email : undefined}
+                        required
+                        label="Enter email"
+                        variant="underlined"
+                      />
+                      {/* <PhoneInput
                     required
                     label="Phone"
                     variant="underlined"
@@ -175,214 +242,214 @@ const ContactUs = () => {
                     onBlur={handleBlur}
                     error={touched.phone ? errors.phone : ""}
                   /> */}
-                    <PhoneInput
+                      <PhoneInput
+                        variant="underlined"
+                        placeholder="Phone Number"
+                        name="phone"
+                        value={values.phone}
+                        onChange={(v) => {
+                          setFieldValue("phone", v);
+                        }}
+                        onBlur={handleBlur}
+                        error={touched.phone ? errors.phone : undefined}
+                      />
+                    </div>
+                    <div className="w-full flex flex-row items-start gap-4">
+                      <DateInput
+                        name="date"
+                        value={values.date ?? null}
+                        required
+                        className="border-b-1"
+                        label="Pick Date and Time"
+                        variant="datetime"
+                        onChange={(val) => {
+                          setFieldValue("date", val);
+                        }}
+                        onBlur={handleBlur}
+                        error={touched.date ? errors.date : undefined}
+                        rangeVariant="start"
+                      />
+                      <DateInput
+                        name="time"
+                        value={values.time ?? null}
+                        required
+                        className="border-b-1"
+                        label="Pick Time"
+                        variant="timeOnly"
+                        onChange={(val) => {
+                          setFieldValue("time", val);
+                        }}
+                        onBlur={handleBlur}
+                        error={touched.time ? errors.time : undefined}
+                        rangeVariant="start"
+                      />
+                    </div>
+                    <Select
+                      // required
+                      name="office"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                       variant="underlined"
-                      placeholder="Phone Number"
-                      name="phone"
-                      value={values.phone}
-                      onChange={(v) => {
-                        setFieldValue("phone", v);
-                      }}
-                      onBlur={handleBlur}
-                      error={touched.phone ? errors.phone : undefined}
+                      label="Select our office"
+                      options={[{ id: "1", label: "SpringFiels" }]}
                     />
+                    <Button
+                      fullWidth
+                      type="submit"
+                      size="lg"
+                      className="px-8 mt-4"
+                      rounded
+                    >
+                      Submit
+                    </Button>
+                  </form>
+                )}
+              </Formik>
+            </div>
+          </Card>
+        </div>
+
+        <div className="hidden md:flex bg-gray w-full h-[800px] pt-10 pb-16 px-28 space-y-8">
+          <Heading variant="h1">Frequently Asked Questions</Heading>
+          <Accordion
+            // accordionItemsStyle={}
+
+            className="h-[100px] pb-10"
+            items={[
+              {
+                id: "1",
+                indicator: {
+                  close: <FaChevronLeft color="#000000" fill="#000000" />,
+                  open: <FaChevronLeft color="#000000" fill="#000000" />,
+                },
+                content: (
+                  <p>
+                    enestado de desarrollo. Muchas versioneshan evolucion ado a
+                    través de los añosalgunas veces por accidente, otras veces
+                    apropósito (por ejemplo insertándole humor y cosas por el
+                    estilo). leer. Muc hos paquetes de autoedicióny editores de
+                    páginas web usan el Lorem Ipsum como su texto por defecto, y
+                    al hacer una búsqueda de Lorem Ipsum va a dar por resultado
+                    muchos sitios web que usan este texto si se encuentran ene
+                    stado de apropósito (por ejemplo insertándole humor y cosas
+                    por el estilo). leer. Muc hos paquetes de autoedicióny
+                    editores de páginas web usan el Lorem Ipsum como su texto
+                    por defecto, y al hacer una búsqueda de Lorem Ipsum va a dar
+                    por resultado muchos sitios web que usan este texto si se
+                    encuentran ene stado de
+                  </p>
+                ),
+                label: (
+                  <div className="w-full flex flex-row items-start justify-start gap-4">
+                    <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
+                    <Heading variant="h3">
+                      Sample of a frequently asked question
+                    </Heading>
                   </div>
-                  <div className="w-full flex flex-row items-start gap-4">
-                    <DateInput
-                      name="date"
-                      value={values.date ?? null}
-                      required
-                      className="border-b-1"
-                      label="Pick Date and Time"
-                      variant="datetime"
-                      onChange={(val) => {
-                        setFieldValue("date", val);
-                      }}
-                      onBlur={handleBlur}
-                      error={touched.date ? errors.date : undefined}
-                      rangeVariant="start"
-                    />
-                    <DateInput
-                      name="time"
-                      value={values.time ?? null}
-                      required
-                      className="border-b-1"
-                      label="Pick Time"
-                      variant="timeOnly"
-                      onChange={(val) => {
-                        setFieldValue("time", val);
-                      }}
-                      onBlur={handleBlur}
-                      error={touched.time ? errors.time : undefined}
-                      rangeVariant="start"
-                    />
+                ),
+              },
+              {
+                id: "2",
+                indicator: {
+                  close: <FaChevronLeft color="#000000" fill="#000000" />,
+                  open: <FaChevronLeft color="#000000" fill="#000000" />,
+                },
+                content: (
+                  <p>
+                    enestado de desarrollo. Muchas versioneshan evolucion ado a
+                    través de los añosalgunas veces por accidente, otras veces
+                    apropósito (por ejemplo insertándole humor y cosas por el
+                    estilo). leer. Muc hos paquetes de autoedicióny editores de
+                    páginas web usan el Lorem Ipsum como su texto por defecto, y
+                    al hacer una búsqueda de Lorem Ipsum va a dar por resultado
+                    muchos sitios web que usan este texto si se encuentran ene
+                    stado de apropósito (por ejemplo insertándole humor y cosas
+                    por el estilo). leer. Muc hos paquetes de autoedicióny
+                    editores de páginas web usan el Lorem Ipsum como su texto
+                    por defecto, y al hacer una búsqueda de Lorem Ipsum va a dar
+                    por resultado muchos sitios web que usan este texto si se
+                    encuentran ene stado de
+                  </p>
+                ),
+                label: (
+                  <div className="w-full flex flex-row items-start justify-start gap-4">
+                    <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
+                    <Heading variant="h3">
+                      Sample of a frequently asked question
+                    </Heading>
                   </div>
-                  <Select
-                    // required
-                    name="office"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    variant="underlined"
-                    label="Select our office"
-                    options={[{ id: "1", label: "SpringFiels" }]}
-                  />
-                  <Button
-                    fullWidth
-                    type="submit"
-                    size="lg"
-                    className="px-8 mt-4"
-                    rounded
-                  >
-                    Submit
-                  </Button>
-                </form>
-              )}
-            </Formik>
-          </div>
-        </Card>
-      </div>
+                ),
+              },
+              {
+                id: "3",
+                indicator: {
+                  close: <FaChevronLeft color="#000000" fill="#000000" />,
+                  open: <FaChevronLeft color="#000000" fill="#000000" />,
+                },
+                content: (
+                  <p>
+                    enestado de desarrollo. Muchas versioneshan evolucion ado a
+                    través de los añosalgunas veces por accidente, otras veces
+                    apropósito (por ejemplo insertándole humor y cosas por el
+                    estilo). leer. Muc hos paquetes de autoedicióny editores de
+                    páginas web usan el Lorem Ipsum como su texto por defecto, y
+                    al hacer una búsqueda de Lorem Ipsum va a dar por resultado
+                    muchos sitios web que usan este texto si se encuentran ene
+                    stado de apropósito (por ejemplo insertándole humor y cosas
+                    por el estilo). leer. Muc hos paquetes de autoedicióny
+                    editores de páginas web usan el Lorem Ipsum como su texto
+                    por defecto, y al hacer una búsqueda de Lorem Ipsum va a dar
+                    por resultado muchos sitios web que usan este texto si se
+                    encuentran ene stado de
+                  </p>
+                ),
+                label: (
+                  <div className="w-full flex flex-row items-start justify-start gap-4">
+                    <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
+                    <Heading variant="h3">
+                      Sample of a frequently asked question
+                    </Heading>
+                  </div>
+                ),
+              },
+              {
+                id: "4",
+                indicator: {
+                  close: <FaChevronLeft color="#000000" fill="#000000" />,
+                  open: <FaChevronLeft color="#000000" fill="#000000" />,
+                },
+                content: (
+                  <p>
+                    enestado de desarrollo. Muchas versioneshan evolucion ado a
+                    través de los añosalgunas veces por accidente, otras veces
+                    apropósito (por ejemplo insertándole humor y cosas por el
+                    estilo). leer. Muc hos paquetes de autoedicióny editores de
+                    páginas web usan el Lorem Ipsum como su texto por defecto, y
+                    al hacer una búsqueda de Lorem Ipsum va a dar por resultado
+                    muchos sitios web que usan este texto si se encuentran ene
+                    stado de apropósito (por ejemplo insertándole humor y cosas
+                    por el estilo). leer. Muc hos paquetes de autoedicióny
+                    editores de páginas web usan el Lorem Ipsum como su texto
+                    por defecto, y al hacer una búsqueda de Lorem Ipsum va a dar
+                    por resultado muchos sitios web que usan este texto si se
+                    encuentran ene stado de
+                  </p>
+                ),
+                label: (
+                  <div className="w-full flex flex-row items-start justify-start gap-4">
+                    <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
+                    <Heading variant="h3">
+                      Sample of a frequently asked question
+                    </Heading>
+                  </div>
+                ),
+              },
+            ]}
+            variant="pills"
+          />
+        </div>
 
-      <div className="bg-gray w-full h-[800px] pt-10 pb-16 px-28 space-y-8">
-        <Heading variant="h1">Frequently Asked Questions</Heading>
-        <Accordion
-          // accordionItemsStyle={}
-
-          className="h-[100px] pb-10"
-          items={[
-            {
-              id: "1",
-              indicator: {
-                close: <FaChevronLeft color="#000000" fill="#000000" />,
-                open: <FaChevronLeft color="#000000" fill="#000000" />,
-              },
-              content: (
-                <p>
-                  enestado de desarrollo. Muchas versioneshan evolucion ado a
-                  través de los añosalgunas veces por accidente, otras veces
-                  apropósito (por ejemplo insertándole humor y cosas por el
-                  estilo). leer. Muc hos paquetes de autoedicióny editores de
-                  páginas web usan el Lorem Ipsum como su texto por defecto, y
-                  al hacer una búsqueda de Lorem Ipsum va a dar por resultado
-                  muchos sitios web que usan este texto si se encuentran ene
-                  stado de apropósito (por ejemplo insertándole humor y cosas
-                  por el estilo). leer. Muc hos paquetes de autoedicióny
-                  editores de páginas web usan el Lorem Ipsum como su texto por
-                  defecto, y al hacer una búsqueda de Lorem Ipsum va a dar por
-                  resultado muchos sitios web que usan este texto si se
-                  encuentran ene stado de
-                </p>
-              ),
-              label: (
-                <div className="w-full flex flex-row items-start justify-start gap-4">
-                  <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
-                  <Heading variant="h3">
-                    Sample of a frequently asked question
-                  </Heading>
-                </div>
-              ),
-            },
-            {
-              id: "2",
-              indicator: {
-                close: <FaChevronLeft color="#000000" fill="#000000" />,
-                open: <FaChevronLeft color="#000000" fill="#000000" />,
-              },
-              content: (
-                <p>
-                  enestado de desarrollo. Muchas versioneshan evolucion ado a
-                  través de los añosalgunas veces por accidente, otras veces
-                  apropósito (por ejemplo insertándole humor y cosas por el
-                  estilo). leer. Muc hos paquetes de autoedicióny editores de
-                  páginas web usan el Lorem Ipsum como su texto por defecto, y
-                  al hacer una búsqueda de Lorem Ipsum va a dar por resultado
-                  muchos sitios web que usan este texto si se encuentran ene
-                  stado de apropósito (por ejemplo insertándole humor y cosas
-                  por el estilo). leer. Muc hos paquetes de autoedicióny
-                  editores de páginas web usan el Lorem Ipsum como su texto por
-                  defecto, y al hacer una búsqueda de Lorem Ipsum va a dar por
-                  resultado muchos sitios web que usan este texto si se
-                  encuentran ene stado de
-                </p>
-              ),
-              label: (
-                <div className="w-full flex flex-row items-start justify-start gap-4">
-                  <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
-                  <Heading variant="h3">
-                    Sample of a frequently asked question
-                  </Heading>
-                </div>
-              ),
-            },
-            {
-              id: "3",
-              indicator: {
-                close: <FaChevronLeft color="#000000" fill="#000000" />,
-                open: <FaChevronLeft color="#000000" fill="#000000" />,
-              },
-              content: (
-                <p>
-                  enestado de desarrollo. Muchas versioneshan evolucion ado a
-                  través de los añosalgunas veces por accidente, otras veces
-                  apropósito (por ejemplo insertándole humor y cosas por el
-                  estilo). leer. Muc hos paquetes de autoedicióny editores de
-                  páginas web usan el Lorem Ipsum como su texto por defecto, y
-                  al hacer una búsqueda de Lorem Ipsum va a dar por resultado
-                  muchos sitios web que usan este texto si se encuentran ene
-                  stado de apropósito (por ejemplo insertándole humor y cosas
-                  por el estilo). leer. Muc hos paquetes de autoedicióny
-                  editores de páginas web usan el Lorem Ipsum como su texto por
-                  defecto, y al hacer una búsqueda de Lorem Ipsum va a dar por
-                  resultado muchos sitios web que usan este texto si se
-                  encuentran ene stado de
-                </p>
-              ),
-              label: (
-                <div className="w-full flex flex-row items-start justify-start gap-4">
-                  <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
-                  <Heading variant="h3">
-                    Sample of a frequently asked question
-                  </Heading>
-                </div>
-              ),
-            },
-            {
-              id: "4",
-              indicator: {
-                close: <FaChevronLeft color="#000000" fill="#000000" />,
-                open: <FaChevronLeft color="#000000" fill="#000000" />,
-              },
-              content: (
-                <p>
-                  enestado de desarrollo. Muchas versioneshan evolucion ado a
-                  través de los añosalgunas veces por accidente, otras veces
-                  apropósito (por ejemplo insertándole humor y cosas por el
-                  estilo). leer. Muc hos paquetes de autoedicióny editores de
-                  páginas web usan el Lorem Ipsum como su texto por defecto, y
-                  al hacer una búsqueda de Lorem Ipsum va a dar por resultado
-                  muchos sitios web que usan este texto si se encuentran ene
-                  stado de apropósito (por ejemplo insertándole humor y cosas
-                  por el estilo). leer. Muc hos paquetes de autoedicióny
-                  editores de páginas web usan el Lorem Ipsum como su texto por
-                  defecto, y al hacer una búsqueda de Lorem Ipsum va a dar por
-                  resultado muchos sitios web que usan este texto si se
-                  encuentran ene stado de
-                </p>
-              ),
-              label: (
-                <div className="w-full flex flex-row items-start justify-start gap-4">
-                  <HiOutlineQuestionMarkCircle className="w-8 h-8" />{" "}
-                  <Heading variant="h3">
-                    Sample of a frequently asked question
-                  </Heading>
-                </div>
-              ),
-            },
-          ]}
-          variant="pills"
-        />
-      </div>
-
-      {/* <section className="p-32 bg-gray">
+        {/* <section className="p-32 bg-gray">
         <Heading className="ml-10 p-10" variant="h1">
           Frequently Asked Questions
         </Heading>
@@ -545,6 +612,7 @@ const ContactUs = () => {
           className=""
         />
       </section> */}
+      </div>
     </>
   );
 };

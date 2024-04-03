@@ -97,7 +97,7 @@ export default function RootLayout({
         <NextProvider>
           <main className="light text-foreground bg-background min-w-[1285px] w-screen min-h-screen font-poppins">
            
-            <div className="px-20 h-10 my-2 relative">
+            <div className="hidden md:flex px-20 h-10 my-2 relative">
               <TopBar />
             </div>
             <NextBar/>
